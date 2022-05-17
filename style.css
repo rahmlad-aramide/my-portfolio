@@ -442,6 +442,7 @@ p {
 .language-icon img {
     margin: .4rem;
 }
+
 /* Responsiveness */
 @media (max-width: 991px) {
   header,
@@ -645,7 +646,7 @@ p {
         rgba(39, 39, 39, 0.9),
         rgba(39, 39, 39, 0.2)
       ),
-      url(../images/Home.jpg) right top;
+      url(images/Home.jpg) right top;
   }
 }
 @media (max-width: 740px) {
@@ -659,24 +660,13 @@ p {
     width: 7rem;
   }
 }
-@media (max-width: 500px) {
-  .skills--skill {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .skills--skill img {
-    border-bottom: 2px solid var(--color-black);
-    padding: 1rem;
-    height: 7rem;
-    width: 7rem;
-  }
-}
 
 @media (max-width: 600px) {
   header,
   header.sticky {
-    padding: 15px 20px;
+      padding: 15px 20px;
     width: 100%;
-  }
+}
   .cover {
     width: 100%;
     padding: 150px 20px 100px;
@@ -692,24 +682,24 @@ p {
         to left,
         rgba(39, 39, 39, 0.9),
         rgba(39, 39, 39, 0.2)
-      ),
-      url(../images/Home.jpg) right 100vh;
-  }
-  .cover_text {
-    font-size: 1em;
+        ),
+        url(images/Home.jpg) right 100vh;
+    }
+    .cover_text {
+        font-size: 1em;
     font-weight: 700;
     color: #fff;
     margin-bottom: 10px;
     margin-top: 0;
-  }
-  .cover h2 {
+}
+.cover h2 {
     font-size: 1.5em;
     font-weight: 500;
     line-height: 1em;
     color: #fff;
     text-decoration: var(--color-primary);
-  }
-  .cover h2 span {
+}
+.cover h2 span {
     font-size: 1em;
     font-weight: 700;
     color: #fff;
@@ -717,10 +707,10 @@ p {
   .toggle {
     cursor: pointer;
     display: initial;
-  }
+}
   .btn {
-    text-decoration: none;
-    margin-top: 20px;
+      text-decoration: none;
+      margin-top: 20px;
     padding: 5px 10px;
     color: #fff;
     font-weight: 500;
@@ -729,5 +719,20 @@ p {
     background-color: var(--color-primary);
     border-radius: 10px;
     border: 2px solid white;
+}
+}
+
+@media (max-width: 500px) {
+  .skills--skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills--skill img {
+    border-bottom: 2px solid var(--color-black);
+    padding: 1rem;
+    height: 7rem;
+    width: 7rem;
+  }
+  .middle{
+      width: 80%;
   }
 }
