@@ -735,4 +735,7 @@ p {
   .middle{
       width: 80%;
   }
+  .small {
+      font-size: 15px;
+  }
 }
