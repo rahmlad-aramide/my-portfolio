@@ -185,9 +185,9 @@ header ul li a {
 .about_img {
   max-width: 100%;
 }
-p {
-  padding-right: 10px;
-}
+/* .about_text {
+  padding-right: 50px;
+} */
 .text--secondary {
   color: var(--color-white);
 }
@@ -442,7 +442,11 @@ p {
 .language-icon img {
     margin: .4rem;
 }
-
+@media (min-width: 990.99px){
+  .about_text {
+    margin-right: 50px;
+  }
+}
 /* Responsiveness */
 @media (max-width: 991px) {
   header,
@@ -455,7 +459,7 @@ p {
     position: fixed;
     top: 62px;
     left: -100%;
-    padding: 100px 50px;
+    padding: 50px;
     display: block;
     text-align: center;
     width: 100%;
@@ -470,12 +474,11 @@ p {
     cursor: pointer;
   }
   header ul li{
-      padding: 1.5rem 0;
+      padding: 1.2rem 0;
   }
   header ul li a {
     color: #fff;
-    margin: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
   }
   .toggle {
@@ -556,8 +559,11 @@ p {
     font-size: 1.25em;
     margin-bottom: 0;
   }
-  .content_box p {
+  .content_box .about_text {
     text-align: justify;
+  }
+  .about_text {
+    margin-right: 0px;
   }
   .content_box {
     font-size: 14px;
@@ -580,6 +586,9 @@ p {
   .about_img {
     max-width: 100%;
     margin-top: 10px;
+  }
+  .about_text {
+    margin-right: 0;
   }
   .services .content .service_box {
     padding: 40px 20px;
@@ -648,6 +657,9 @@ p {
       ),
       url(images/Home.jpg) right top;
   }
+  .about_text {
+    margin-right: 0px;
+  }
 }
 @media (max-width: 740px) {
   .skills--skill {
@@ -666,6 +678,9 @@ p {
   header.sticky {
       padding: 15px 20px;
     width: 100%;
+}
+.about_text {
+  margin-right: 0px;
 }
   .cover {
     width: 100%;
@@ -720,6 +735,9 @@ p {
     border-radius: 10px;
     border: 2px solid white;
 }
+.about_text {
+  margin-right: 0px;
+}
 }
 
 @media (max-width: 500px) {
@@ -737,5 +755,8 @@ p {
   }
   .small {
       font-size: 12px;
+  }
+  .about_text {
+    margin-right: 0px;
   }
 }
