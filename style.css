@@ -442,6 +442,26 @@ header ul li a {
 .language-icon img {
     margin: .4rem;
 }
+.animatedIn {
+  animation-name: textSlideIn;
+  animation-duration: 3s;
+  transition: ease-in;
+}
+.animatedDown {
+  animation-name: textSlideDown;
+  animation-duration: 3s;
+  transition: ease-in;
+}
+.animatedUp {
+  animation-name: textSlideUp;
+  animation-duration: 3s;
+  transition: ease-in;
+}
+.animatedGrow {
+  animation-name: textGrow;
+  animation-duration: 3s;
+  transition: ease-in;
+}
 @media (min-width: 990.99px){
   .about_text {
     margin-right: 50px;
@@ -758,5 +778,43 @@ header ul li a {
   }
   .about_text {
     margin-right: 0px;
+  }
+}
+
+
+@keyframes textSlideIn {
+  0% {
+      margin-left: -100%;
+  }
+  
+  100% {
+      margin-right: 0;
+  }
+}
+@keyframes textSlideUp {
+  0% {
+      margin-top: -15%;
+  }
+  
+  100% {
+      margin-top: 0%;
+  }
+}
+@keyframes textSlideDown {
+  0% {
+      margin-bottom: -100%;
+  }
+  
+  100% {
+      margin-bottom: 0%;
+  }
+}
+@keyframes textGrow {
+  0% {
+      transform: scale(0.5);
+  }
+  
+  100% {
+      transform: scale(1);
   }
 }
