@@ -2,26 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+* {
+  scroll-behavior: smooth;
+  scrollbar-highlight-color: #F2BF3C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.custom-container {
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media (min-width: 1280px) {
+  .custom-container {
+      max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .custom-container {
+      max-width: 1536px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+nav a {
+  position: relative;
+  width: fit-content;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1.5px;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease;
+  transform: translate3d(0, 0, 0);
+}
+
+nav a::after, nav a:active::after {
+  background-color: #F2BF3C;
+}
+
+nav a:hover::after, nav a:active::after {
+  width: 100% !important;
+}
+
+.pattern-before, .pattern-after {
+  position: relative;
+}
+.pattern-before::before, .pattern-after::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #F2BF3C;
+  /* opacity: 90%; */
+  filter: blur(200px);
+  border-radius: 150px;
+}
+.pattern-before::before {
+  top: 0;
+  left: -50px;
+}
+.pattern-after::before {
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 768px){
+  .pattern-before::before, .pattern-after::before {
+    width: 300px;
+    height: 300px;
   }
+  .pattern-before::before {
+    top: 0;
+    left: 0;
+  }
+  .pattern-after::before {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.stalinist-outline {
+  font-family: inherit, sans-serif;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 1.5px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+.clamped-h2 {
+  font-size: clamp(1.5rem, 6vw, 3.75rem) !important;
 }
