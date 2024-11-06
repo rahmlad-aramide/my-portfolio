@@ -19,7 +19,7 @@ export default function RootLayout({
         className={`${workSans.className} bg-black text-white custom-container transition duration-200 antialiased`}
       >
         <Navbar />
-        <main className=" px-6 md:px-10 lg:px-20">
+        <main className="px-6 md:px-10 lg:px-20">
           {children}
         </main>
       </body>

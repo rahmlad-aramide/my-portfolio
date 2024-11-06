@@ -1,19 +1,20 @@
 import { stalinistOne } from "@/app/fonts";
 import Image from "next/image";
-import hero from "@/app/assets/images/hero.png";
+import hero from "@/app/assets/images/hero.webp";
 import Link from "next/link";
 import { FacebookIcon, GithubIcon, LinkedInIcon, XIcon } from "@/app/assets/svg";
 
+export const socialLinks = [
+    {label: "Github", href: "https://github.com/rahmlad-aramide", icon: <GithubIcon />},
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rahmlad", icon: <LinkedInIcon />},
+  {label: "X (formerly Twitter)", href: "https://x.com/Dev_Rahmlad", icon: <XIcon />},
+  {label: "Facebook", href: "https://web.facebook.com/abdrahman.oladimeji.aramide", icon: <FacebookIcon />}
+]
+
 export const Hero = () => {
-    const socialLinks = [
-        {label: "Github", href: "https://github.com/rahmlad-aramide", icon: <GithubIcon />},
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/rahmlad", icon: <LinkedInIcon />},
-      {label: "X (formerly Twitter)", href: "https://x.com/Dev_Rahmlad", icon: <XIcon />},
-      {label: "Facebook", href: "https://www.facebook.com/abdrahman.oladimeji", icon: <FacebookIcon />}
-    ]
 
   return (
-    <section className="flex flex-col-reverse md:flex-row justify-between py-10 md:py-[100px] pattern-before">
+    <section id="home" className="flex flex-col-reverse md:flex-row justify-between py-10 md:py-[100px] pattern-before">
       <div className="flex flex-col md:flex-col md:basis-[60%] md:max-w-[60%] md:overflow-visible">
         <h1 className="order-2 md:order-1 md:max-w-[45ch] lg:max-w-[55ch] md:-mr-[162px] md:ml-auto mt-5 mb-4 md:mt-12 lg:mt-24 md:mb-20 xl:mb-[147px] font-medium z-20 relative">
           Abdrahman Oladimeji - A Professional Frontend Developer that helps
