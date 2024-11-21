@@ -14,8 +14,8 @@ export const socialLinks = [
 export const Hero = () => {
 
   return (
-    <section id="home" className="flex flex-col-reverse md:flex-row justify-between py-10 md:py-[100px] pattern-before">
-      <div className="flex flex-col md:flex-col md:basis-[60%] md:max-w-[60%] md:overflow-visible">
+    <section id="home" className="flex flex-col-reverse md:flex-row justify-between pt-24 py-10 md:py-[100px] pattern-before">
+      <div className="flex flex-col md:flex-col md:basis-[60%] md:max-w-[60%] md:overflow-visible relative">
         <h1 className="order-2 md:order-1 md:max-w-[45ch] lg:max-w-[55ch] md:-mr-[162px] md:ml-auto mt-5 mb-4 md:mt-12 lg:mt-24 md:mb-20 xl:mb-[147px] font-medium z-20 relative">
           Abdrahman Oladimeji - A Professional Frontend Developer that helps
           brands and businesses thrive and grow by creating visually appealing
@@ -37,7 +37,7 @@ export const Hero = () => {
             ))}
         </div>
       </div>
-      <div className="md:basis-[60%] md:max-w-[60%] h-auto mb-6 md:mb-0">
+      <div className="md:basis-[60%] md:max-w-[60%] h-auto mb-6 md:mb-0 relative">
         <Image
           src={hero}
           alt="Abdrahman Oladimeji holding a microphone at a session"
