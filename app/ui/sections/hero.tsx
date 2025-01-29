@@ -17,7 +17,7 @@ export const Hero = () => {
     <section id="home" className="flex flex-col-reverse md:flex-row justify-between pt-24 py-10 md:py-[100px] pattern-before">
       <div className="flex flex-col md:flex-col md:basis-[60%] md:max-w-[60%] md:overflow-visible relative">
         <h1 className="order-2 md:order-1 md:max-w-[45ch] lg:max-w-[55ch] md:-mr-[162px] md:ml-auto mt-5 mb-4 md:mt-12 lg:mt-24 md:mb-20 xl:mb-[147px] font-medium z-20 relative">
-          Abdrahman Oladimeji - A Professional Frontend Developer that helps
+          Abdrahman Oladimeji - An experienced Frontend Developer that helps
           brands and businesses thrive and grow by creating visually appealing
           and user-friendly web and mobile applications.
         </h1>
@@ -26,7 +26,8 @@ export const Hero = () => {
             className={`${stalinistOne.className} uppercase md:-mr-[162px] md:ml-auto clamped-h2 z-20 relative`}
             >
             <h2>Frontend</h2>
-            <h2 className={`stalinist-outline`}>Engineer</h2>
+            <h2 className={`stalinist-outline`}>Software</h2>
+            <h2 className={`stalinist-outline`}>Developer</h2>
             </hgroup>
         </div>
         <div className="order-3 flex gap-4">

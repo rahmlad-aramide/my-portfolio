@@ -7,6 +7,9 @@ import { Projects } from "@/app/ui/sections/projects";
 export default function Home() {
   return (
     <>
+      <p className="scrolling-text">
+        <span>🔥 This is still a work in progress—cool new projects coming soon! 🛠️ Stay tuned! 🚀</span>
+      </p>
       <Hero />
       <SectionDivider heading="About" />
       <About />
