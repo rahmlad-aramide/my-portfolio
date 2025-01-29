@@ -119,15 +119,15 @@ nav a:hover::after, nav a:active::after {
 
 .scrolling-text {
   white-space: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: block;
   width: 100%;
 }
 
 .scrolling-text span {
   display: inline-block;
-  padding-left: 100%;
-  animation: scroll-text 10s linear infinite;
+  padding-inline: 10%;
+  animation: scroll-text 30s linear infinite;
 }
 
 @keyframes scroll-text {
