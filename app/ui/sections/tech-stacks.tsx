@@ -1,4 +1,5 @@
 'use client';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Bootstrap, CSS, Expo, Firebase, HTML, JavaScript, JQuery, NextJS, React, ReactNative, SASS, Shadcn, Tailwind, TypeScript, Vue } from "@/app/assets/svg"
 import { stalinistOne } from "@/app/fonts";
 import { useEffect, useState } from "react";
@@ -13,14 +14,14 @@ export const TechStacks = () => {
             name: "ReactJS",
             icon: <React />,
         },
-        {
-            name: "React Native",
-            icon: <ReactNative />
-        },
-        {
-            name: "Expo",
-            icon: <Expo />,
-        },
+        // {
+        //     name: "React Native",
+        //     icon: <ReactNative />
+        // },
+        // {
+        //     name: "Expo",
+        //     icon: <Expo />,
+        // },
         {
             name: "TypeScript",
             icon: <TypeScript />,

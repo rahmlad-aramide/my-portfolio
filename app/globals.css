@@ -92,9 +92,6 @@ nav a:hover::after, nav a:active::after {
   font-family: inherit, sans-serif;
   -webkit-text-stroke: 1.5px #ffffff;
   -webkit-text-fill-color: transparent;
-}
-
-.stalinist-outline {
   letter-spacing: 5px;
 }
 

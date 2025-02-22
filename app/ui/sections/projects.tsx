@@ -14,8 +14,8 @@ export const Projects = () => {
             </h2>
             <div className="flex justify-center items-center gap-8 mb-14 md:mb-20 relative">
                 <button onClick={()=> setProjectsType("Web")} className={`${stalinistOne.className} text-lg md:text-2xl ${projectsType === "Web" ?"text-white": "text-[#FFFFFF80]"} transition duratin-200`}>Web</button>
-                <div className="w-0.5 h-8 bg-[#C4C4C4]"></div>
-                <button onClick={()=> setProjectsType("Mobile")} className={`${stalinistOne.className} text-lg md:text-2xl ${projectsType === "Mobile" ?"text-white": "text-[#FFFFFF80]"} transition duratin-200`}>Mobile App</button>
+                {/* <div className="w-0.5 h-8 bg-[#C4C4C4]"></div>
+                <button onClick={()=> setProjectsType("Mobile")} className={`${stalinistOne.className} text-lg md:text-2xl ${projectsType === "Mobile" ?"text-white": "text-[#FFFFFF80]"} transition duratin-200`}>Mobile App</button> */}
             </div>
             <div className="flex flex-col gap-10 md:gap-20 mb-[77px] md:mb-20 relative">
                 {projectsData.map((project, idx)=> (
