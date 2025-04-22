@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { workSans } from "./fonts";
 import { Navbar } from "./ui/components/navbar";
+import { Contact } from "./ui/sections/contact";
+import { Footer } from "./ui/components/footer";
+import { SectionDivider } from "./ui/components/section-divider";
 
 export const metadata: Metadata = {
   title: "Abdrahman Oladimeji - Frontend Engineer Portfolio Website.",
@@ -19,9 +22,14 @@ export default function RootLayout({
         className={`${workSans.className} bg-black text-white custom-container transition duration-200 antialiased`}
       >
         <Navbar />
-        <main className=" px-6 md:px-10 lg:px-20">
-          {children}
+        <main className="px-6 md:px-10 lg:px-20">
+          <>
+            {children}
+          </>
+          <SectionDivider heading="Contact" />
+          <Contact />
         </main>
+        <Footer />
       </body>
     </html>
   );
