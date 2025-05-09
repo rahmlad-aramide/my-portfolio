@@ -7,8 +7,8 @@ import { Footer } from "./ui/components/footer";
 import { SectionDivider } from "./ui/components/section-divider";
 
 export const metadata: Metadata = {
-  title: "Abdrahman Oladimeji - Frontend Engineer Portfolio Website.",
-  description: "Abdrahman Oladimeji - A Professional Frontend Developer that helps brands and businesses grow and thrive by creating visually appealing and user-friendly web and mobile applications.",
+  title: "Abdrahman Oladimeji - Frontend Software Developer Portfolio Website.",
+  description: "Abdrahman Oladimeji - An Experienced Frontend Software Developer that helps brands and businesses grow and thrive by creating visually appealing and user-friendly web and mobile applications.",
 };
 
 export default function RootLayout({

@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 export const Icon = () => {
   return (
     <svg
@@ -422,3 +424,46 @@ export const Vue = () => {
     </svg>
   )
 }
+
+export const ArrowRight: FC<{ type?: "arrow" | "external", animated?: boolean,  }> = ({
+  type = "arrow", 
+  animated = true,
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`${type === "arrow" ? "" : "-rotate-45 scale-75"} ${animated? "animate-pulse": ""}`}
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+};
+
+export const ChevronRight = () => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 5L15 12L8 19"
+        stroke="#E3E4E6"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
