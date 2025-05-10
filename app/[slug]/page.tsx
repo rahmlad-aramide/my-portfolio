@@ -12,11 +12,26 @@ export default async function Page({
   const { slug } = await params;
   const project = projectsData.find((proj) => proj.slug === slug);
 
+  if (!project) {
+    return (
+      <main className="flex flex-col pt-24 py-10 md:py-[100px] pattern-after">
+        <div className="flex flex-col justify-center items-center gap-10 pattern-before min-h-[50vh]">
+          <h1 className={`${stalinistOne.className} uppercase clamped-h2 z-20 text-center`}>
+            Project not found!
+          </h1>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="flex flex-col pt-24 py-10 md:py-[100px] pattern-after">
-      <div className="flex flex-col gap-10">
-        <div className="pt-5">
-          <Link href={"/#projects"} className="flex gap-2 hover:opacity-80 active:opacity-100 transition-opacity duration-200">
+      <div className="flex flex-col gap-10 pattern-before">
+        <div className="pt-5 relative">
+          <Link
+            href={"/#projects"}
+            className="flex gap-2 hover:opacity-80 active:opacity-100 transition-opacity duration-200"
+          >
             <span className="rotate-180">
               <ArrowRight animated={false} />
             </span>
@@ -31,23 +46,44 @@ export default async function Page({
           </h1>
           <Link
             href={project?.projectUrl || ""}
-            className="text-white bg-primary border border-primary disabled:bg-primary/50 hover:bg-transparent active:bg-primary w-full md:w-fit max-w-[342px] min-h-[60px] rounded-[40px] px-6 md:px-10 flex justify-center items-center transition duration-200 gap-[5px] whitespace-nowrap"
+            target={"_blank"}
+            className="text-white bg-primary border border-primary disabled:bg-primary/50 hover:bg-transparent active:bg-primary w-full md:w-fit max-w-[342px] min-h-12 md:min-h-[60px] rounded-[40px] px-6 md:px-10 flex justify-center items-center transition duration-200 gap-[5px] whitespace-nowrap"
           >
             Visit Website <ArrowRight />
           </Link>
         </div>
-        <div className="flex justify-between gap-10">
+        <div className="flex flex-col md:flex-row justify-between gap-10">
           <div className={`${workSans.className} flex flex-col gap-3`}>
-            <h3 className={`font-semibold text-2xl`}>STACK</h3>
+            <h3 className={`font-semibold text-lg md:text-2xl`}>STACK</h3>
             <p className="text-sm">{project?.languages.join(", ")}</p>
           </div>
-          <div className={`${workSans.className} flex flex-col gap-3`}>
-            <h3 className={`font-semibold text-2xl text-center`}>STATUS</h3>
-            <p className="text-sm text-center">{project?.status}</p>
+          <div className="flex gap-3 justify-between order-3 md:order-2">
+              <div
+                className={`${workSans.className} flex flex-col gap-3 order-3 md:order-2`}
+              >
+                <h3 className={`font-semibold text-lg md:text-2xl md:text-center`}>TYPE</h3>
+                <p className="text-sm md:text-center">{project?.type}</p>
+              </div>
+              <div
+                className={`${workSans.className} flex md:hidden flex-col gap-3 order-3 md:order-2`}
+              >
+                <h3 className={`font-semibold text-lg md:text-2xl md:text-center`}>STATUS</h3>
+                <p className="text-sm md:text-center">{project?.status}</p>
+              </div>
           </div>
-          <div className={`${workSans.className} flex flex-col gap-3 relative`}>
-            <h3 className={`font-semibold text-2xl text-right`}>GITHUB REPO</h3>
-            <p className="text-sm text-right">
+          <div
+                className={`${workSans.className} hidden md:flex flex-col gap-3 order-3 md:order-2`}
+              >
+                <h3 className={`font-semibold text-lg md:text-2xl md:text-center`}>STATUS</h3>
+                <p className="text-sm md:text-center">{project?.status}</p>
+              </div>
+          <div
+            className={`${workSans.className} flex flex-col gap-3 relative order-2 md:order-3`}
+          >
+            <h3 className={`font-semibold text-lg md:text-2xl md:text-right`}>
+              GITHUB REPO
+            </h3>
+            <p className="text-sm md:text-right">
               <Link
                 href={project?.repo ?? ""}
                 target="_blank"
@@ -79,12 +115,14 @@ export default async function Page({
           </div>
         ) : null}
         <div>
-          <p>{project?.description}</p>
+          <p className={`${workSans.className} text-justify sm:text-left`}>{project?.detail}</p>
         </div>
-        <div className="flex flex-col gap-4">
-          <h3 className={`${stalinistOne.className} text-2xl`}>CHALLENGES</h3>
-          <p className={`${workSans.className}`}>{project?.challenge}</p>
-        </div>
+        {project?.gains ? (
+          <div className="flex flex-col gap-4">
+            <h3 className={`${stalinistOne.className} text-2xl`}>GOALS</h3>
+            <p className={`${workSans.className} text-justify sm:text-left`}>{project?.gains}</p>
+          </div>
+        ) : null}
         {project?.image2 ? (
           <div className="relative py-10">
             <div className="h-full w-full top-0 left-0 blur absolute">
@@ -105,10 +143,12 @@ export default async function Page({
             />
           </div>
         ) : null}
-        <div className="flex flex-col gap-4">
-          <h3 className={`${stalinistOne.className} text-2xl`}>GOAL</h3>
-          <p className={`${workSans.className}`}>{project?.gains}</p>
-        </div>
+        {project?.challenge ? (
+          <div className="flex flex-col gap-4">
+            <h3 className={`${stalinistOne.className} text-2xl`}>CHALLENGES</h3>
+            <p className={`${workSans.className} text-justify sm:text-left`}>{project?.challenge}</p>
+          </div>
+        ) : null}
         {project?.image3 ? (
           <div className="relative py-10">
             <div className="h-full w-full top-0 left-0 blur absolute">

@@ -5,6 +5,7 @@ import { TechStacks } from "@/app/ui/sections/tech-stacks";
 import { Projects } from "@/app/ui/sections/projects";
 
 export default function Home() {
+  
   return (
     <>
       <Hero />

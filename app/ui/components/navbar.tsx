@@ -31,7 +31,7 @@ export const Navbar = () => {
     }, []);
 
   return (
-    <header className={`fixed left-0 z-50 w-full transition-all duration-300 ease-in-out py-2 md:py-4 ${isScrolled? "bg-black/70 backdrop-blur-md top-0": "top-6"} ${isNavOpened? "h-full bg-black/70 backdrop-blur-md !top-0": null}`}>
+    <header className={`fixed left-0 z-50 w-full transition-all duration-300 ease-in-out py-2 md:py-4 ${isScrolled? "bg-black/70 backdrop-blur-md top-0": "top-6"} ${isNavOpened? "h-full md:h-auto bg-black/70 backdrop-blur-md !top-0": null}`}>
       <nav className="flex justify-between items-center w-full custom-container mx-auto">
         <Link
           href={"/"}

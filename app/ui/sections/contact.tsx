@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { stalinistOne } from "@/app/fonts";
 import { socialLinks } from "./hero";
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
@@ -88,6 +88,22 @@ export const Contact = () => {
       }
     }
   };
+
+  useEffect(()=> {
+    console.log(`%c
+      ✨🎨💻
+      `,
+      "font-size: 2em;"
+      );
+      
+      console.log(`%cAbdrahman Oladimeji - Crafting digital experiences that spark connection and leave a mark.`, "font-weight: bold; font-size: 1.1em; color: #2196f3;");
+      console.log("%cPsst... curious about the inner workings? Open the 'Elements' and 'Console' tabs in your developer tools for a peek behind the scenes! 😉", "color: #00bcd4; font-style: italic;");
+      
+      setTimeout(() => {
+        console.log("%c🚀 Welcome to my portfolio! Feel free to dive into the code and see the magic happen. Let's build something amazing together!", "color: #4caf50; font-weight: bold;");
+      }, 2000);
+  },[])
+
   return (
     <>
       <ToastContainer />
@@ -97,7 +113,7 @@ export const Contact = () => {
               <h2
                 className={`${stalinistOne.className} text-[24px] md:text-4xl md:max-w-[14ch]`}
               >
-                Ready to work with me on a project?
+                Interested in working with me?
               </h2>
               <div className="flex gap-4 relative">
                 {socialLinks.slice(1).map((link, idx) => (
