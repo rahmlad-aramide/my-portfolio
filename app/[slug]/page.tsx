@@ -115,12 +115,12 @@ export default async function Page({
           </div>
         ) : null}
         <div>
-          <p className={`${workSans.className} text-justify sm:text-left`}>{project?.detail}</p>
+          <p className={`${workSans.className} text-justify`}>{project?.detail}</p>
         </div>
         {project?.gains ? (
           <div className="flex flex-col gap-4">
             <h3 className={`${stalinistOne.className} text-2xl`}>GOALS</h3>
-            <p className={`${workSans.className} text-justify sm:text-left`}>{project?.gains}</p>
+            <p className={`${workSans.className} text-justify`}>{project?.gains}</p>
           </div>
         ) : null}
         {project?.image2 ? (
@@ -146,7 +146,7 @@ export default async function Page({
         {project?.challenge ? (
           <div className="flex flex-col gap-4">
             <h3 className={`${stalinistOne.className} text-2xl`}>CHALLENGES</h3>
-            <p className={`${workSans.className} text-justify sm:text-left`}>{project?.challenge}</p>
+            <p className={`${workSans.className} text-justify`}>{project?.challenge}</p>
           </div>
         ) : null}
         {project?.image3 ? (
