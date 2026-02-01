@@ -6,66 +6,66 @@ import { useEffect, useState } from "react";
 
 export const TechStacks = () => {
     const stacks = [
-        {
-            name: "NextJS",
-            icon: <NextJS />,
-        },
-        {
-            name: "ReactJS",
-            icon: <React />,
-        },
-        // {
-        //     name: "React Native",
-        //     icon: <ReactNative />
-        // },
-        // {
-        //     name: "Expo",
-        //     icon: <Expo />,
-        // },
-        {
-            name: "TypeScript",
-            icon: <TypeScript />,
-        },
-        {
-            name: "JavaScript",
-            icon: <JavaScript />,
-        },
-        {
-            name: "TailwindCSS",
-            icon: <Tailwind />,
-        },
-        {
-            name: "Shadcn/ui",
-            icon: <Shadcn />,
-        },
-        {
-            name: "SASS",
-            icon: <SASS />
-        },
-        {
-            name: "HTML",
-            icon: <HTML />,
-        }, 
-        {
-            name: "CSS",
-            icon: <CSS />,
-        },
-        {
-            name: "Bootstrap",
-            icon: <Bootstrap />,
-        },
-        {
-            name: "Firebase",
-            icon: <Firebase />,
-        },
-        {
-            name: "jQuery",
-            icon: <JQuery />,
-        },
-        {
-            name: "Vue",
-            icon: <Vue />
-        }
+      {
+        name: "React Native",
+        icon: <ReactNative />,
+      },
+      {
+        name: "Expo",
+        icon: <Expo />,
+      },
+      {
+        name: "ReactJS",
+        icon: <React />,
+      },
+      {
+        name: "NextJS",
+        icon: <NextJS />,
+      },
+      {
+        name: "TypeScript",
+        icon: <TypeScript />,
+      },
+      {
+        name: "JavaScript",
+        icon: <JavaScript />,
+      },
+      {
+        name: "TailwindCSS",
+        icon: <Tailwind />,
+      },
+      {
+        name: "Shadcn/ui",
+        icon: <Shadcn />,
+      },
+      {
+        name: "SASS",
+        icon: <SASS />,
+      },
+      {
+        name: "HTML",
+        icon: <HTML />,
+      },
+      {
+        name: "CSS",
+        icon: <CSS />,
+      },
+      {
+        name: "Bootstrap",
+        icon: <Bootstrap />,
+      },
+      {
+        name: "Firebase",
+        icon: <Firebase />,
+      },
+      {
+        name: "jQuery",
+        icon: <JQuery />,
+      },
+      {
+        name: "Vue",
+        icon: <Vue />,
+      },
     ];
 
     const [itemsToShow, setItemsToShow] = useState(0);

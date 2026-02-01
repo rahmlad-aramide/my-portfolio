@@ -1,75 +1,70 @@
 "use client";
 import { useState } from "react";
+
 import { stalinistOne } from "@/app/fonts";
 import { Project } from "@/app/ui/components/project";
 import { projectsData } from "@/app/data";
+
 import Organized from "./organized";
 
 export const Projects = () => {
   const [viewType, setViewType] = useState<"Featured" | "Organized">(
-    "Featured"
+    "Featured",
   );
   const [showArchived, setShowArchived] = useState(false);
+  const [platformFilter, setPlatformFilter] = useState<"web" | "mobile">(
+    "mobile",
+  );
 
   return (
     <section id="projects" className="pattern-before py-8">
-      <div className="flex justify-center items-center gap-2 sm:gap-4 md:gap-8 mb-6 sm:mb-8 md:mb-10 relative">
+      <div className="flex gap-4 mb-6 md:mb-10 mx-auto w-fit">
         <button
-          onClick={() => setViewType("Featured")}
+          onClick={() => setPlatformFilter("web")}
           className={`${stalinistOne.className} text-sm sm:text-lg md:text-2xl ${
-            viewType === "Featured" ? "text-white" : "text-[#FFFFFF80]"
+            platformFilter === "web" ? "text-white" : "text-[#FFFFFF80]"
           } transition duration-200`}
         >
-          Featured
+          Web Apps
         </button>
-        <div className="w-0.5 h-4 sm:h-6 md:h-8 bg-[#C4C4C4]">{" "}</div>
+        <div className="w-0.5 h-4 sm:h-6 md:h-8 bg-[#C4C4C4]"> </div>
         <button
-          onClick={() => setViewType("Organized")}
+          onClick={() => setPlatformFilter("mobile")}
           className={`${stalinistOne.className} text-sm sm:text-lg md:text-2xl ${
-            viewType === "Organized" ? "text-white" : "text-[#FFFFFF80]"
+            platformFilter === "mobile" ? "text-white" : "text-[#FFFFFF80]"
           } transition duration-200`}
         >
-          Organized
+          Mobile Apps
         </button>
       </div>
-      <div className="flex flex-col gap-10 md:gap-20 mb-5 md:mb-20 relative">
-        {viewType === "Featured" ? (
-          <div className="flex flex-col gap-10 md:gap-20 relative">
-            {projectsData.filter(p=>p.isFeatured).map((project, idx) => (
-              <Project
-                key={idx}
-                projectTitle={project.name}
-                description={project.description}
-                imageLink={project.framedImage}
-                pageLink={project.slug}
-                projectLink={project.projectUrl}
-                type={idx % 2 === 0 ? "imageFirst" : "textFirst"}
-              />
-            ))}
+      {platformFilter === "mobile" ? (
+        <>
+          <div className="flex flex-col gap-10 md:gap-20 mb-5 md:mb-20 relative">
             <div className="flex flex-col gap-10 md:gap-20 relative">
-              <button
-                onClick={() => setShowArchived(!showArchived)}
-                className={`${stalinistOne.className} text-sm sm:text-lg md:text-2xl text-white hover:text-primary transition duration-200 underline underline-offset-3 hover:decoration-primary`}
-              >
-                {!showArchived? "Show": "Hide"} Archived Projects
-              </button>
-              {showArchived && projectsData.filter(p=>p.isArchived).map((project, idx) => (
-              <Project
-                key={idx}
-                projectTitle={project.name}
-                description={project.description}
-                imageLink={project.framedImage}
-                pageLink={project.slug}
-                projectLink={project.projectUrl}
-                type={idx % 2 === 0 ? "imageFirst" : "textFirst"}
-              />
-            ))}
+              {projectsData
+                .filter((p) => p.platform === "mobile")
+                .map((project, idx) => (
+                  <Project
+                    key={idx}
+                    projectTitle={project.name}
+                    description={project.description}
+                    imageLink={project.framedImage}
+                    pageLink={project.slug}
+                    projectLink={project.projectUrl}
+                    demoVideo={project.demoVideo}
+                    type={idx % 2 === 0 ? "imageFirst" : "textFirst"}
+                  />
+                ))}                
             </div>
           </div>
-        ) : (
-          <Organized />
-        )}
-      </div>
+        </>
+      ) : (
+        <>
+          <div className="flex flex-col gap-10 md:gap-20 mb-5 md:mb-20 relative">
+            <Organized />
+          </div>
+        </>
+      )}
     </section>
   );
 };

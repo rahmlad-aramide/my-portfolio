@@ -24,9 +24,8 @@ export const Hero = () => {
             <hgroup
             className={`${stalinistOne.className} uppercase md:-mr-[162px] md:ml-auto clamped-h2 z-20 relative`}
             >
-            <h2>Frontend</h2>
-            <h2 className={`stalinist-outline`}>Software</h2>
-            <h2 className={`stalinist-outline`}>Developer</h2>
+            <h2>Software</h2>
+            <h2 className={`stalinist-outline`}>Engineer</h2>
             </hgroup>
         </div>
         <div className="order-3 flex gap-4">

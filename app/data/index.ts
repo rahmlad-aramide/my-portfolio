@@ -17,104 +17,181 @@ import rainHackathon from '@/app/assets/framed/Rain-Hackathon.webp';
 import rainSummit from '@/app/assets/framed/Rain-Summit.webp';
 import treesoft from '@/app/assets/framed/Treesoft.webp';
 import uverus from '@/app/assets/framed/Uverus.webp';
+import joindaQuest from '@/app/blur.jpg'
+import appOwe from "@/app/blur.jpg";
 
-export const projectsData1 = [
-    {
-        name: "Language AI",
-        description: "A web-based translation tool designed to provide accurate and efficient translations of texts and documents.",
-        pageUrl: 'language-ai',
-        projectUrl: 'https://languageai.vercel.app',
-        image: langueageai,
-        category: 'personal',
-    },
-    {
-        name: "WAPP",
-        description: "An advanced weather forecasting application with data visualization tools.",
-        pageUrl: 'wapp',
-        projectUrl: 'https://r-wapp.vercel.app/',
-        image: wapp,
-        category: 'personal',
-    },
-    {
-        name: "Adorn",
-        description: "A furniture products ordering website that eases the purchase of home & office furnitures.",
-        pageUrl: 'adorn',
-        projectUrl: 'https://adorn.netlify.app/',
-        image: adorn,
-        category: 'personal',
-    },
-    {
-        name: "Ridot",
-        description: "A software academy landing page website that includes their pricing and subscription information.",
-        pageUrl: '',
-        projectUrl: 'https://ridot.org',
-        image: ridot,
-        category: 'brands',
-    },
-    {
-        name: "Hackade",
-        description: "A software academy landing page website that includes their pricing and subscription information.",
-        pageUrl: '',
-        projectUrl: 'https://hackade.net',
-        image: ridot,
-        category: 'communities',
-    },
-    {
-        name: "RAIN Hackathon",
-        description: "A software academy landing page website that includes their pricing and subscription information.",
-        pageUrl: '',
-        projectUrl: 'https://hackathon.rainigeria.com/',
-        image: ridot,
-        category: 'communities',
-    },
-    {
-        name: "RAIN Summit",
-        description: "A software academy landing page website that includes their pricing and subscription information.",
-        pageUrl: '',
-        projectUrl: 'https://summit.rainigeria.com/',
-        image: ridot,
-        category: 'communities',
-    },
-    {
-        name: "Flutterbytes Conf. '24",
-        description: "A software academy landing page website that includes their pricing and subscription information.",
-        pageUrl: '',
-        projectUrl: 'https://www.flutterbytesconf.com/',
-        image: ridot,
-        category: 'communities',
-    },
-    {
-        name: "Yieldvest",
-        description: "A stock recommendation app for tracking, analyzing and recommending stocks through fundamental analysis to reduce investment risks.",
-        pageUrl: '',
-        projectUrl: '',
-        image: yieldvest,
-        category: 'internship',
-    },
-]
 interface TProject {
-    id?: number;
-    name: string;
-    description: string;
-    slug: string;
-    projectUrl: string;
-    framedImage: string | StaticImageData;
-    category: string;
-    repo: string;
-    languages: string[];
-    image?: string;
-    image2?: string;
-    image3?: string;
-    type?: string;
-    status?: string;
-    version?: string;
-    detail?: string;
-    challenge?: string;
-    gains?: string;
-    isFeatured?: boolean;
-    isArchived?: boolean;
+  id?: number;
+  name: string;
+  description: string;
+  slug: string;
+  projectUrl: string;
+  framedImage: string | StaticImageData;
+  category: string;
+  repo: string;
+  languages: string[];
+  image?: string;
+  image2?: string;
+  image3?: string;
+  type?: string;
+  status?: string;
+  version?: string;
+  detail?: string;
+  challenge?: string;
+  gains?: string;
+  isFeatured?: boolean;
+  isArchived?: boolean;
+  platform: "web" | "mobile";
+  demoVideo?: string;
 }
 export const projectsData: TProject[] = [
+  {
+    id: 20,
+    name: "Xpacy Mobile",
+    framedImage: langueageai,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Xpacy/xpacy_main.png",
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/Xpacy/xpacy_listing.png",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Xpacy/xpacy_payment.png",
+    projectUrl: "https://xpacy.com/",
+    repo: "https://github.com/rahmlad-aramide/xpacy-mobile",
+    type: "Real Estate & Facility Management",
+    status: "Completed",
+    version: "v.1.2.0",
+    slug: "xpacy-mobile",
+    description:
+      "A comprehensive real estate ecosystem for seamless property renting, buying, and professional facility management services.",
+    detail:
+      "Xpacy is a high-performance mobile application designed to bridge the gap between property owners, seekers, and service providers. It serves as a one-stop shop where users can list properties for sale or rent, browse verified listings with advanced price filtering, and execute secure transactions. Beyond standard real estate, Xpacy integrates a unique 'Service Request' module, allowing returning users to book facility management services like maintenance, space planning, and security. The app features a robust payment gateway for service fees and rental deposits, alongside a user-centric dashboard for tracking property status and service history.",
+    languages: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind",
+      "Paystack SDK",
+      "Tanstack Query",
+    ],
+    category: "organizations",
+    challenge:
+      "The most complex hurdle was architecting a dual-flow system that caters to both property seekers and existing tenants requesting services. Balancing the real estate marketplace with a maintenance booking system required a highly flexible database schema and a state management strategy that could handle concurrent updates. Furthermore, ensuring secure, PCI-compliant payment processing within a mobile environment while maintaining a smooth UI during heavy data fetching (e.g., high-resolution property images) demanded significant performance optimization and caching strategies.",
+    gains:
+      "Building Xpacy Mobile allowed me to master the business side of tech—specifically the integration of financial systems and service-level agreements (SLAs) into a mobile product. I refined my skills in building scalable backend services for Rahmlad Solutions and gained deep insights into mobile-first user retention strategies. This project also tested my ability to handle complex API integrations for map services and automated property verification workflows, ultimately delivering a production-ready tool that solves real-world housing and maintenance challenges.",
+    isFeatured: true,
+    platform: "mobile",
+    demoVideo: "https://www.youtube.com/embed/6swESqNItlQ?si=VZAWIkQi001ujGdb",
+  },
+  {
+    id: 19,
+    name: "Reciplorer Mobile",
+    framedImage: reciplorer,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Reciplorer/reciplorer2_enmjbg.png",
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/Reciplorer/reciplorer1_seql8k.png",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Reciplorer/reciplorer3_z682h3.png",
+    projectUrl: "https://reciplorer.vercel.app/",
+    repo: "https://github.com/rahmlad-aramide/reciplorer",
+    type: "Global Problem Solving",
+    status: "Completed",
+    version: "v.1",
+    slug: "reciplorer-mobile",
+    description:
+      "A cross-platform mobile recipe application providing ingredients, quantities, and step-by-step guides to preparing global meals.",
+    detail:
+      "Reciplorer Mobile is a recipe exploring application which provides ingredients, quantity, and a step-by-step guide to preparing the meal with the selected recipe. Designed to bring seamless recipe discovery to the kitchen counter, it offers a touch-optimized interface for browsing a wide variety of recipes. Users can access comprehensive ingredient lists and follow gesture-friendly instructions directly on their devices.",
+    languages: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind (Tailwind CSS)",
+      "TheMealDB API",
+      "Tanstack Query",
+    ],
+    category: "personal",
+    challenge:
+      "The primary challenge was translating the rich data density of the Reciplorer web experience into a compact mobile UI without sacrificing usability. This required a deep dive into mobile-specific navigation patterns and optimizing image assets for varying mobile bandwidths.",
+    gains:
+      "This project enhanced my expertise in cross-platform development and mobile UI/UX principles. I gained significant experience in managing mobile-specific states and optimizing API calls for reduced data consumption.",
+    isFeatured: true,
+    platform: "mobile",
+    demoVideo: "https://youtube.com/embed/Q9aqe9U5y40",
+  },
+  {
+    id: 22,
+    name: "Joinda Quest Mobile",
+    framedImage: joindaQuest,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Joinda/joinda2.png", // Replace with actual Joinda images
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/Joinda/joinda1.png",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Joinda/joinda3.png",
+    projectUrl: "https://joinda-quest.vercel.app/",
+    repo: "https://github.com/rahmlad-aramide/joinda-quest",
+    type: "Social Engagement",
+    status: "Completed",
+    version: "v.1",
+    slug: "joinda-quest-mobile",
+    description:
+      "A social engagement application where users participate in quests, complete tasks, and play games to earn rewards.",
+    detail:
+      "Joinda Quest Mobile is a social engagement application which allows users to participate in quests and tasks, play games, and earn rewards for participating in those activities. It focuses on gamifying social interactions and providing a platform for community challenges. Users can track their progress, view leaderboards, and redeem rewards through an intuitive mobile interface.",
+    languages: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind",
+      "Firebase",
+      "Zustand",
+    ],
+    category: "personal",
+    challenge:
+      "Implementing a real-time reward and task tracking system that syncs across multiple devices while maintaining high performance during gameplay was a significant hurdle. Ensuring the security of the reward distribution logic was also paramount.",
+    gains:
+      "I strengthened my knowledge of gamification logic and real-time database management. It also allowed me to explore complex user engagement metrics and mobile-first social networking patterns.",
+    isFeatured: false,
+    platform: "mobile",
+    demoVideo: "https://www.youtube.com/embed/1cvStJFUe2c",
+  },
+  {
+    id: 21,
+    name: "AppOwe",
+    framedImage: appOwe,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/AppOwe/appowe2.png", // Replace with actual AppOwe images
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/AppOwe/appowe1.png",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/AppOwe/appowe3.png",
+    projectUrl: "https://appowe.vercel.app/",
+    repo: "https://github.com/rahmlad-aramide/appowe",
+    type: "Cultural Preservation",
+    status: "Completed",
+    version: "v.1",
+    slug: "appowe-proverbs",
+    description:
+      "An educational platform for discovering Yoruba proverbs, their meanings, translations, and daily insights.",
+    detail:
+      "AppOwe (Proverb App) is an application that allows people to learn about proverbs. Users can explore the deep meanings and interpretations of indigenous proverbs, translate them, favorite specific ones for later study, and receive notifications for daily new proverbs. It serves as a bridge between traditional wisdom and modern technology.",
+    languages: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Tailwind CSS",
+      "i18next",
+    ],
+    category: "personal",
+    challenge:
+      "The main challenge was handling complex string data for translations and ensuring the cultural nuances of the proverbs remained intact through the UI. Designing a 'Proverb of the Day' notification system required careful background task management in React Native.",
+    gains:
+      "This project deepened my understanding of internationalization (i18n) and local storage management. I also gained insights into how tech can be used for cultural heritage preservation.",
+    isFeatured: false,
+    platform: "mobile",
+    demoVideo: "https://www.youtube.com/embed/ORBLGY-YlF0",
+  },
   {
     id: 1,
     name: "Language AI",
@@ -149,6 +226,7 @@ export const projectsData: TProject[] = [
     gains:
       "LanguageAI is designed to empower users by providing an accessible and efficient translation tool that supports translations across over 130 languages. This extensive language support enhances global accessibility, fostering understanding and collaboration among diverse populations. It's particularly beneficial in the educational sector, where students and educators can access a broader range of learning materials in various languages, promoting educational equity. For businesses, LanguageAI ensures operational efficiency by facilitating swift translations of documents and communications in multilingual environments, thus expanding market reach and driving growth. Furthermore, LanguageAI enriches cultural exchanges by allowing users to explore literature and documents in foreign languages, enhancing cultural awareness and appreciation.\n\nOn a personal level, developing LanguageAI has been immensely rewarding, enhancing my proficiency with advanced AI technologies such as the Microsoft Azure translation model and deepening my understanding of multilingual data processing. This project has significantly honed my skills in integrating complex machine learning models into practical applications, providing me with invaluable experience in navigating the challenges of AI-driven language translation. The technical skills and insights gained have prepared me for future projects in AI and language processing, marking a significant milestone in my career as a software developer.",
     isFeatured: true,
+    platform: "web",
   },
   {
     id: 2,
@@ -184,6 +262,7 @@ export const projectsData: TProject[] = [
     gains:
       "Developing Reciplorer has provided me with valuable experience in building a complete web application from scratch with a focus on user interaction and data management. I've gained practical skills in integrating third-party APIs like TheMealDB, handling complex backend data, and implementing client-side routing and state management with NextJS and React. The implementation of search and filtering functionality has deepened my understanding of effective optimization for efficient data retrieval. Furthermore, building the recipe submission feature has enhanced my knowledge of form handling and data validation. This project has significantly improved my proficiency in front-end development with TypeScript, Tailwind CSS, and UI libraries like Shadcn UI, as well as deployment on platforms like Vercel. Overall, Reciplorer represents a tangible demonstration of my ability to create functional and user-friendly web applications from concept to deployment.",
     isFeatured: true,
+    platform: "web",
   },
   {
     id: 3,
@@ -225,6 +304,7 @@ export const projectsData: TProject[] = [
       Anticipated User Benefits:
       The application is expected to make weather-related information more accessible, providing users with tools necessary for planning and decision-making based on weather conditions. Its educational potential is significant, offering a practical resource for students and educators in meteorological studies. For researchers, WApp provides a platform for data analysis and weather pattern observation. Additionally, by delivering timely and accurate weather warnings, it enhances community safety and preparedness for adverse weather conditions.`,
     isFeatured: true,
+    platform: "web",
   },
   {
     id: 4,
@@ -248,12 +328,13 @@ export const projectsData: TProject[] = [
         The platform is designed with user-friendly interfaces that cater specifically to those who are beginners in technology, ensuring that learning materials are accessible and engaging. The curriculum covers everything from basic programming concepts to advanced software development, data science, and more, all structured to facilitate a supportive learning environment for women.
         `,
     languages: ["React", "Tailwind CSS", "Netlify"],
-    category: "brands",
+    category: "organizations",
     challenge: `Developing Ridot Software Academy presented a unique challenge: the absence of a predefined design template. This required crafting a user-friendly, engaging, and inclusive design from scratch, which had to resonate with a diverse audience and ensure ease of use for tech newcomers. Balancing aesthetic appeal with functional design, all while creating an environment that promotes learning and interaction, was paramount.`,
     gains: `On a personal level, the development of Ridot Software Academy has been profoundly rewarding. It has allowed me to contribute positively by advocating for greater inclusivity in the tech field. Creating a platform that directly addresses and supports the underrepresented group of women in tech has deepened my commitment to social impact within the tech industry. This project has not only enhanced my technical skills but also enriched my perspective on the transformative power of technology as a tool for empowerment.
 
       For the community, Ridot Software Academy has become a pivotal force in promoting diversity in the tech world. It empowers women by providing the necessary skills and confidence to succeed in tech roles, thereby fostering a more inclusive industry. The success of academy participants helps challenge stereotypes and inspires a broader cultural shift towards equality in tech, encouraging more women to pursue and excel in technology careers.`,
     isFeatured: true,
+    platform: "web",
   },
   {
     id: 5,
@@ -274,16 +355,12 @@ export const projectsData: TProject[] = [
       "A furniture company ecommerce website project to ease the purchase of home & office furnitures.",
     detail:
       "As a problem solver, I took it up as a challenge to provide a solution to a local problem using my skills, which led me to focus on a skilled craftsman in my area who owns a furniture company but lacks an online presence. This means customers can currently only view his products at his company showroom, which isn't ideal in this digital age. Hence, I decided to help his brand create a website where customers can shop and check out their products directly and even have them delivered to their doorstep, as the company possesses a vehicle for transporting their purchased products.",
-    languages: [
-      "React",
-      "Tailwind CSS",
-      "Firebase",
-      "Netlify",
-    ],
+    languages: ["React", "Tailwind CSS", "Firebase", "Netlify"],
     category: "personal",
     challenge: `A major problem that I am faced with in this design and development stage is obtaining high-quality pictures of his products to display in the website catalog and categories section. Therefore, I am tentatively using placeholder images until the project is launched.`,
     gains: `As it's still a work in progress, the major gain I'm looking forward to is seeing that I can solve a local problem. I was inspired to do this because I was impressed by the quality of his work. Additionally, since his company owns a vehicle used to transport products to customers, this website will further bring his brand to the attention of potential clients and eliminate the need for them to visit the showroom before making a purchase.`,
     isFeatured: true,
+    platform: "web",
   },
   {
     id: 6,
@@ -318,6 +395,7 @@ export const projectsData: TProject[] = [
     challenge: `I was required to use TypeScript for the project which I've not learned before, so I had to learn the basics of it on the go because of the deadline, even though I started it with React JSX then later converted it to TypeScript TSX. Also, I was required to write a few components and unit testing, I had to learn the basics of it as well so as to be able to make my submission before the deadline.`,
     gains: `It gave me a chance to work within a short timeframe/a tight deadline while ensuring I submit a quality work and a chance to add and improve my skills.`,
     isArchived: true,
+    platform: "web",
   },
   {
     id: 7,
@@ -351,6 +429,7 @@ export const projectsData: TProject[] = [
     challenge: `As there's not backend engineer on the team, we had to result into using some already built libraries and technologies within our reach. Also, we don't have access to the National database that houses the voters information, we had to make use of random user and/or random number where applicable in which we believe will give us an avenue to get it adopted and get needed real data and resources to make it available for use by all.`,
     gains: `It greatly made me to realize that I may not always have access to all the needed resources to execute projects completely which I need to make as such that it doesn't turn into obstacles while working on the project, therefore we had to look for some other alternatives and other possible approaches that we can take to get the job done. Also, my teamwork and team communication skills improved, as well as coding styles and learning, relearning, and unlearning through interactions with others on the team.`,
     isArchived: true,
+    platform: "web",
   },
   {
     id: 8,
@@ -383,6 +462,7 @@ export const projectsData: TProject[] = [
     challenge: `As the Frontend Team Lead, one of the challenges I faced was managing my team members, especially during times of deviation from the given instruction(s). Additionally, on a personal level, being in an internship program that overlapped with my examination period, the erratic state of power supply, coupled with my PC's damaged battery, presented serious challenges while working on the project.`,
     gains: `Indeed, after difficulty comes ease. Despite all the hurdles, it later turned out to be something that prepared me for similar obstacles that I may encounter at a later time, because for me to be able to scale through successfully, it simply ignites my spirit of not giving up, which is greatly helpful. Also, teamwork and team management skills improved, as well as coding styles and learning, relearning, and unlearning through interactions with others.`,
     isArchived: true,
+    platform: "web",
   },
   {
     id: 9,
@@ -395,6 +475,7 @@ export const projectsData: TProject[] = [
     category: "communities",
     repo: "",
     languages: ["Next JS", "Tailwind CSS", "Shadcn"],
+    platform: "web",
   },
   {
     id: 10,
@@ -407,6 +488,7 @@ export const projectsData: TProject[] = [
     category: "communities",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
   {
     id: 11,
@@ -419,6 +501,7 @@ export const projectsData: TProject[] = [
     category: "communities",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
   {
     id: 12,
@@ -431,6 +514,7 @@ export const projectsData: TProject[] = [
     category: "communities",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
   {
     id: 13,
@@ -443,6 +527,7 @@ export const projectsData: TProject[] = [
     category: "communities",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
   {
     id: 14,
@@ -452,9 +537,10 @@ export const projectsData: TProject[] = [
     slug: "",
     projectUrl: "https://thejoin.io/",
     framedImage: join,
-    category: "brands",
+    category: "organizations",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
   {
     id: 15,
@@ -464,9 +550,10 @@ export const projectsData: TProject[] = [
     slug: "",
     projectUrl: "https://nugapay.com/",
     framedImage: nugapay,
-    category: "brands",
+    category: "organizations",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
   {
     id: 16,
@@ -476,9 +563,10 @@ export const projectsData: TProject[] = [
     slug: "",
     projectUrl: "https://treesoft.vercel.app/",
     framedImage: treesoft,
-    category: "brands",
+    category: "organizations",
     repo: "",
     languages: ["Next JS", "Tailwind CSS", "Shadcn UI"],
+    platform: "web",
   },
   {
     id: 17,
@@ -488,9 +576,10 @@ export const projectsData: TProject[] = [
     slug: "",
     projectUrl: "https://uverus.com/",
     framedImage: uverus,
-    category: "brands",
+    category: "organizations",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
   {
     id: 18,
@@ -500,9 +589,10 @@ export const projectsData: TProject[] = [
     slug: "",
     projectUrl: "https://www.flutterbytesconf.com/",
     framedImage: aofounda,
-    category: "brands",
+    category: "organizations",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
+    platform: "web",
   },
 
   // {

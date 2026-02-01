@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import { Project } from "../components/project";
 
 const Organized = () => {
+  const featuredProject = projectsData.find((project) => project.isFeatured);
+  const categories = [
+    "Featured",
+    ...Array.from(new Set(projectsData.map((project) => project.category))),
+  ];
   const [selectedCategory, setSelectedCategory] = useState(
-    projectsData[1].category
-  );
-  const categories = Array.from(
-    new Set(projectsData.map((project) => project.category))
+    categories[0]
   );
 
   return (
@@ -55,10 +57,16 @@ const Organized = () => {
           </div>
           <div className="mt-4 lg:mt-0 w-full lg:w-[calc(75%_-_2.286px)] px-0 md:pl-11 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {projectsData
-              .filter((project) => project.category === selectedCategory)
+              .filter((project) => {
+                if(project.platform !== 'web') return false;
+                if (selectedCategory === "Featured" && project.platform === 'web') {
+                  return project.isFeatured;
+                }
+                return project.category === selectedCategory;
+              })
               .map((proj, idx) => (
                 <Project
-                  key={idx}
+                  key={proj.id || idx}
                   type={"organized"}
                   imageLink={proj.framedImage}
                   projectTitle={proj.name}

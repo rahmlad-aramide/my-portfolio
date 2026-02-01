@@ -9,6 +9,7 @@ interface ITextsAndLink {
   pageLink: string;
   projectLink: string;
   type: "imageFirst" | "textFirst" | "organized";
+  demoVideo?: string;
 }
 interface IProject extends ITextsAndLink {
   imageLink?: string | StaticImageData;
@@ -60,6 +61,7 @@ export const Project: React.FC<IProject> = ({
   pageLink,
   projectLink,
   imageLink,
+  demoVideo,
 }) => {
   return (
     <div
@@ -67,8 +69,8 @@ export const Project: React.FC<IProject> = ({
         type === "imageFirst"
           ? "md:flex-row"
           : type === "textFirst"
-          ? "md:flex-row-reverse"
-          : "flex-col"
+            ? "md:flex-row-reverse"
+            : "flex-col"
       } flex-col gap-4 md:gap-8`}
     >
       <div
@@ -77,7 +79,17 @@ export const Project: React.FC<IProject> = ({
         } h-full p-4 sm:p-7 flex justify-center items-center border border-[#1C1C1C] hover:border-primary group`}
       >
         <div className="flex w-full h-auto">
-          {imageLink ? (
+          {demoVideo ? (
+            <div className="aspect-[1/1.5] overflow-hidden rounded-lg mx-auto">
+              <iframe
+                src={demoVideo}
+                title={`${projectTitle} demo video`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              ></iframe>
+            </div>
+          ) : imageLink ? (
             <Image
               src={imageLink}
               width={434}
