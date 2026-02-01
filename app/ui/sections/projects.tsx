@@ -18,13 +18,13 @@ export const Projects = () => {
   const handleFilterChange = (newPlatform: string) => {
     const params = new URLSearchParams(searchParams);
     params.set("platform", newPlatform);
-    router.push(`?${params.toString()}`);
+    router.push(`?${params.toString()}`, {scroll: false});
   };
 
   return (
     <Suspense fallback={<Loading />}>
       <section id="projects" className="pattern-before py-8">
-        <div className="flex gap-4 mb-6 md:mb-10 mx-auto w-fit">
+        <div className="flex gap-4 mb-6 md:mb-10 mx-auto w-fit relative">
           <button
             onClick={() => handleFilterChange("web")}
             className={`${stalinistOne.className} text-sm sm:text-lg md:text-2xl ${
