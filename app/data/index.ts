@@ -50,12 +50,6 @@ export const projectsData: TProject[] = [
     id: 20,
     name: "Xpacy Mobile",
     framedImage: langueageai,
-    image:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Xpacy/xpacy_main.png",
-    image2:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/Xpacy/xpacy_listing.png",
-    image3:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Xpacy/xpacy_payment.png",
     projectUrl: "https://xpacy.com/",
     repo: "https://github.com/rahmlad-aramide/xpacy-mobile",
     type: "Real Estate & Facility Management",
@@ -76,9 +70,9 @@ export const projectsData: TProject[] = [
     ],
     category: "organizations",
     challenge:
-      "The most complex hurdle was architecting a dual-flow system that caters to both property seekers and existing tenants requesting services. Balancing the real estate marketplace with a maintenance booking system required a highly flexible database schema and a state management strategy that could handle concurrent updates. Furthermore, ensuring secure, PCI-compliant payment processing within a mobile environment while maintaining a smooth UI during heavy data fetching (e.g., high-resolution property images) demanded significant performance optimization and caching strategies.",
+      "The most complex hurdle was architecting a dual-flow system that caters to both property seekers and existing tenants requesting services. Balancing the real estate marketplace with a maintenance booking system required a highly flexible state management strategy that could handle the dynamic environments. Furthermore, ensuring secure, PCI-compliant payment processing within a mobile environment while maintaining a smooth UI during heavy data fetching (e.g., high-resolution property images) demanded significant performance optimization and caching strategies.",
     gains:
-      "Building Xpacy Mobile allowed me to master the business side of tech—specifically the integration of financial systems and service-level agreements (SLAs) into a mobile product. I refined my skills in building scalable backend services for Rahmlad Solutions and gained deep insights into mobile-first user retention strategies. This project also tested my ability to handle complex API integrations for map services and automated property verification workflows, ultimately delivering a production-ready tool that solves real-world housing and maintenance challenges.",
+      "Building Xpacy Mobile allowed me to master the business side of tech—specifically the integration of financial systems and service-level agreements (SLAs) into a mobile product. I refined my skills in building scalable products and gained deep insights into mobile-first user retention strategies. This project also tested my ability to handle complex API integrations for map services and automated property verification workflows, ultimately delivering a production-ready tool that solves real-world housing and maintenance challenges.",
     isFeatured: true,
     platform: "mobile",
     demoVideo: "https://www.youtube.com/embed/6swESqNItlQ?si=VZAWIkQi001ujGdb",
@@ -87,12 +81,6 @@ export const projectsData: TProject[] = [
     id: 19,
     name: "Reciplorer Mobile",
     framedImage: reciplorer,
-    image:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Reciplorer/reciplorer2_enmjbg.png",
-    image2:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/Reciplorer/reciplorer1_seql8k.png",
-    image3:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Reciplorer/reciplorer3_z682h3.png",
     projectUrl: "https://reciplorer.vercel.app/",
     repo: "https://github.com/rahmlad-aramide/reciplorer",
     type: "Global Problem Solving",
@@ -124,14 +112,8 @@ export const projectsData: TProject[] = [
     id: 22,
     name: "Joinda Quest Mobile",
     framedImage: joindaQuest,
-    image:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Joinda/joinda2.png", // Replace with actual Joinda images
-    image2:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/Joinda/joinda1.png",
-    image3:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Joinda/joinda3.png",
     projectUrl: "https://joinda-quest.vercel.app/",
-    repo: "https://github.com/rahmlad-aramide/joinda-quest",
+    repo: "https://github.com/joindaio/quest-mobile",
     type: "Social Engagement",
     status: "Completed",
     version: "v.1",
@@ -148,11 +130,11 @@ export const projectsData: TProject[] = [
       "Firebase",
       "Zustand",
     ],
-    category: "personal",
+    category: "organizations",
     challenge:
-      "Implementing a real-time reward and task tracking system that syncs across multiple devices while maintaining high performance during gameplay was a significant hurdle. Ensuring the security of the reward distribution logic was also paramount.",
+      "Implementing a real-time reward and task tracking system that syncs across multiple devices while maintaining high performance interactive experience was a significant hurdle. Ensuring the correct integration of the reward distribution logic was also paramount.",
     gains:
-      "I strengthened my knowledge of gamification logic and real-time database management. It also allowed me to explore complex user engagement metrics and mobile-first social networking patterns.",
+      "I strengthened my knowledge of engineering a social engagement platform serving over 10,000 users across the world. It also allowed me to explore complex user engagement metrics and mobile-first social networking patterns.",
     isFeatured: false,
     platform: "mobile",
     demoVideo: "https://www.youtube.com/embed/1cvStJFUe2c",
@@ -161,35 +143,28 @@ export const projectsData: TProject[] = [
     id: 21,
     name: "AppOwe",
     framedImage: appOwe,
-    image:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/AppOwe/appowe2.png", // Replace with actual AppOwe images
-    image2:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/AppOwe/appowe1.png",
-    image3:
-      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/AppOwe/appowe3.png",
     projectUrl: "https://appowe.vercel.app/",
     repo: "https://github.com/rahmlad-aramide/appowe",
     type: "Cultural Preservation",
     status: "Completed",
     version: "v.1",
-    slug: "appowe-proverbs",
+    slug: "appowe",
     description:
       "An innovative mobile application designed to preserve and promote Yoruba culture through an interactive collection of timeless proverbs, meanings, and translations.",
     detail:
-      "AppOwe (Pronounced Apowe) bridges the generational gap in Yoruba linguistic heritage. It provides a modern platform for users to discover daily proverbs, access English translations, and explore deep cultural explanations. Key features include social sharing, bookmarking favorites via local storage, and offline access, making it a vital tool for academics, language learners, and cultural enthusiasts. The app contributes to SDG 4 (Quality Education) by fostering linguistic learning and cultural exchange.",
+      "AppOwe (Proverb App (yor.)) bridges the generational gap in Yoruba linguistic heritage. It provides a modern platform for users to discover daily proverbs, access English translations, and explore deep cultural explanations. Key features include social sharing, bookmarking favorites via local storage, and offline access, making it a vital tool for academics, language learners, and cultural enthusiasts. The app contributes to SDG 4 (Quality Education) by fostering linguistic learning and cultural exchange.",
     languages: [
       "React Native",
       "Expo",
       "TypeScript",
       "NativeWind",
       "Huggingface API",
-      "i18next",
     ],
     category: "personal",
     challenge:
       "The primary challenge was ensuring the profound metaphors of Yoruba proverbs were accurately represented in a digital format. Implementing an offline-first experience for local storage while maintaining a lightweight app footprint required careful architectural planning. Additionally, creating a seamless social sharing system that generates clean, readable text versions of proverbs for platforms like WhatsApp and Twitter was a key technical focus.",
     gains:
-      "This project allowed me to combine my technical expertise in React Native with a passion for cultural preservation. I gained deep experience in internationalization (i18n), background tasks for daily updates, and building accessible UIs for diverse age groups. It also served as a case study for Rahmlad Solutions on how technology can drive social impact and preserve heritage.",
+      "This project allowed me to combine my technical expertise in React Native with a passion for cultural preservation. I gained deep experience in internationalization, background tasks for daily updates, and building accessible UIs for diverse age groups. It also served as a case study for Rahmlad Solutions on how technology can drive social impact and preserve heritage.",
     isFeatured: false,
     platform: "mobile",
     demoVideo: "https://www.youtube.com/embed/ORBLGY-YlF0",

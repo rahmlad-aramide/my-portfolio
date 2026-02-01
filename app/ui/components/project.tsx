@@ -10,6 +10,7 @@ interface ITextsAndLink {
   projectLink: string;
   type: "imageFirst" | "textFirst" | "organized";
   demoVideo?: string;
+  isFeatured?: boolean;
 }
 interface IProject extends ITextsAndLink {
   imageLink?: string | StaticImageData;
@@ -21,6 +22,7 @@ const TextsAndLink: React.FC<ITextsAndLink> = ({
   pageLink,
   projectLink,
   type,
+  isFeatured
 }) => {
   return (
     <div
@@ -41,12 +43,12 @@ const TextsAndLink: React.FC<ITextsAndLink> = ({
         {description}
       </p>
       <Link
-        href={type === "organized" ? projectLink : pageLink}
+        href={(type === "organized" && !isFeatured) ? projectLink : pageLink}
         className={`text-xs ${type === "organized" ? "md:text-sm py-1.5 px-3" : "md:text-base py-2 px-4"} gap-1 uppercase border border-[#E3E4E68C] rounded-full bg-transparent hover:bg-primary transition duration-200 inline-flex items-center`}
       >
-        {type === "organized" ? "Visit Website" : "View Work"}
+        {(type === "organized" && !isFeatured) ? "Visit Website" : "View Work"}
         {
-          type === "organized"?
+          (type === "organized" && !isFeatured)?
             <ArrowRight type="external" />
           : <ChevronRight />
         }
@@ -62,6 +64,7 @@ export const Project: React.FC<IProject> = ({
   projectLink,
   imageLink,
   demoVideo,
+  isFeatured
 }) => {
   return (
     <div
@@ -106,6 +109,7 @@ export const Project: React.FC<IProject> = ({
             projectLink={projectLink}
             projectTitle={projectTitle}
             type={type}
+            isFeatured={isFeatured}
           />
         ) : null}
       </div>
@@ -116,6 +120,7 @@ export const Project: React.FC<IProject> = ({
           projectLink={projectLink}
           projectTitle={projectTitle}
           type={type}
+          isFeatured={isFeatured}
         />
       ) : null}
     </div>

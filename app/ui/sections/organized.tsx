@@ -72,6 +72,7 @@ const Organized = () => {
                   pageLink={proj.slug}
                   projectLink={proj.projectUrl}
                   description={proj.description}
+                  isFeatured={proj.isFeatured}
                 />
               ))}
           </div>
