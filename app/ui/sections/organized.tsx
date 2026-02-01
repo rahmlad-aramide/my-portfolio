@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Project } from "../components/project";
 
 const Organized = () => {
-  const featuredProject = projectsData.find((project) => project.isFeatured);
   const categories = [
     "Featured",
     ...Array.from(new Set(projectsData.map((project) => project.category))),

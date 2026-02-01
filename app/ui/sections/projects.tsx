@@ -8,10 +8,6 @@ import { projectsData } from "@/app/data";
 import Organized from "./organized";
 
 export const Projects = () => {
-  const [viewType, setViewType] = useState<"Featured" | "Organized">(
-    "Featured",
-  );
-  const [showArchived, setShowArchived] = useState(false);
   const [platformFilter, setPlatformFilter] = useState<"web" | "mobile">(
     "mobile",
   );
