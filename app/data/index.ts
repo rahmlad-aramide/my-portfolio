@@ -1,24 +1,25 @@
-import { StaticImageData } from 'next/image';
-import langueageai from '@/app/assets/framed/Language-AI.webp';
-import wapp from '@/app/assets/framed/Wapp.webp';
-import ridot from '@/app/assets/framed/Ridot.webp';
-import adorn from '@/app/assets/framed/Adorn.webp';
-import yieldvest from '@/app/assets/images/projects/yieldvest-overview.webp';
-import reciplorer from '@/app/assets/framed/Reciplorer.webp';
-import scissor from '@/app/assets/framed/Scissors.webp';
-import aofounda from '@/app/assets/framed/AO-Foundation.webp';
-import devfest from '@/app/assets/framed/Devfest-Mosho.webp';
-import flutterbytes from '@/app/assets/framed/FlutterBytes.webp';
-import hackade from '@/app/assets/framed/Hackade.webp';
-import join from '@/app/assets/framed/Join.webp';
-import nugapay from '@/app/assets/framed/Nugapay.webp';
-import pvcpipe from '@/app/assets/framed/PVC-Pipe.webp';
-import rainHackathon from '@/app/assets/framed/Rain-Hackathon.webp';
-import rainSummit from '@/app/assets/framed/Rain-Summit.webp';
-import treesoft from '@/app/assets/framed/Treesoft.webp';
-import uverus from '@/app/assets/framed/Uverus.webp';
-import joindaQuest from '@/app/blur.jpg'
+import { StaticImageData } from "next/image";
+
+import adorn from "@/app/assets/framed/Adorn.webp";
+import aofounda from "@/app/assets/framed/AO-Foundation.webp";
 import appOwe from "@/app/blur.jpg";
+import devfest from "@/app/assets/framed/Devfest-Mosho.webp";
+import flutterbytes from "@/app/assets/framed/FlutterBytes.webp";
+import hackade from "@/app/assets/framed/Hackade.webp";
+import join from "@/app/assets/framed/Join.webp";
+import joindaQuest from "@/app/blur.jpg";
+import langueageai from "@/app/assets/framed/Language-AI.webp";
+import nugapay from "@/app/assets/framed/Nugapay.webp";
+import pvcpipe from "@/app/assets/framed/PVC-Pipe.webp";
+import rainHackathon from "@/app/assets/framed/Rain-Hackathon.webp";
+import rainSummit from "@/app/assets/framed/Rain-Summit.webp";
+import reciplorer from "@/app/assets/framed/Reciplorer.webp";
+import ridot from "@/app/assets/framed/Ridot.webp";
+import scissor from "@/app/assets/framed/Scissors.webp";
+import treesoft from "@/app/assets/framed/Treesoft.webp";
+import uverus from "@/app/assets/framed/Uverus.webp";
+import wapp from "@/app/assets/framed/Wapp.webp";
+import yieldvest from "@/app/assets/images/projects/yieldvest-overview.webp";
 
 interface TProject {
   id?: number;
@@ -173,21 +174,22 @@ export const projectsData: TProject[] = [
     version: "v.1",
     slug: "appowe-proverbs",
     description:
-      "An educational platform for discovering Yoruba proverbs, their meanings, translations, and daily insights.",
+      "An innovative mobile application designed to preserve and promote Yoruba culture through an interactive collection of timeless proverbs, meanings, and translations.",
     detail:
-      "AppOwe (Proverb App) is an application that allows people to learn about proverbs. Users can explore the deep meanings and interpretations of indigenous proverbs, translate them, favorite specific ones for later study, and receive notifications for daily new proverbs. It serves as a bridge between traditional wisdom and modern technology.",
+      "AppOwe (Pronounced Apowe) bridges the generational gap in Yoruba linguistic heritage. It provides a modern platform for users to discover daily proverbs, access English translations, and explore deep cultural explanations. Key features include social sharing, bookmarking favorites via local storage, and offline access, making it a vital tool for academics, language learners, and cultural enthusiasts. The app contributes to SDG 4 (Quality Education) by fostering linguistic learning and cultural exchange.",
     languages: [
       "React Native",
       "Expo",
       "TypeScript",
-      "Tailwind CSS",
+      "NativeWind",
+      "Huggingface API",
       "i18next",
     ],
     category: "personal",
     challenge:
-      "The main challenge was handling complex string data for translations and ensuring the cultural nuances of the proverbs remained intact through the UI. Designing a 'Proverb of the Day' notification system required careful background task management in React Native.",
+      "The primary challenge was ensuring the profound metaphors of Yoruba proverbs were accurately represented in a digital format. Implementing an offline-first experience for local storage while maintaining a lightweight app footprint required careful architectural planning. Additionally, creating a seamless social sharing system that generates clean, readable text versions of proverbs for platforms like WhatsApp and Twitter was a key technical focus.",
     gains:
-      "This project deepened my understanding of internationalization (i18n) and local storage management. I also gained insights into how tech can be used for cultural heritage preservation.",
+      "This project allowed me to combine my technical expertise in React Native with a passion for cultural preservation. I gained deep experience in internationalization (i18n), background tasks for daily updates, and building accessible UIs for diverse age groups. It also served as a case study for Rahmlad Solutions on how technology can drive social impact and preserve heritage.",
     isFeatured: false,
     platform: "mobile",
     demoVideo: "https://www.youtube.com/embed/ORBLGY-YlF0",
