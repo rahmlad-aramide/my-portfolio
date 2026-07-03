@@ -22,7 +22,7 @@ export const Contact = () => {
   
     // Validate name
     if (!name || typeof name !== 'string' || name.trim().length === 0) {
-      toast('A prefered name is required.', {type: 'info'});
+      toast('A preferred name is required.', {type: 'info'});
       isValid = false;
     }
   

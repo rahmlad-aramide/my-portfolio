@@ -21,17 +21,16 @@ export const Hero = () => {
     >
       <div className="flex flex-col md:flex-col md:basis-[60%] md:max-w-[60%] md:overflow-visible relative">
         <h1 className="order-2 md:order-1 md:max-w-[45ch] lg:max-w-[55ch] md:-mr-[162px] md:ml-auto mt-5 mb-4 md:mt-12 lg:mt-24 md:mb-20 xl:mb-[147px] font-medium z-20 relative">
-          Abdrahman Oladimeji (Rahmlad) - A Fullstack Web and Cross-Platform Mobile App
+          Abdrahman Oladimeji (Rahmlad) - A Cross-Platform Mobile App
           Developer with a foundation in high-performance Frontend Engineering.
           Specializing in transforming complex ideas into pixel-perfect,
-          user-friendly interfaces that captivate users across web and mobile
-          ecosystems.
+          user-friendly interfaces that captivate users across mobile ecosystems.
         </h1>
         <div className="order-1 md:order-2 max-w-fit">
           <hgroup
             className={`${stalinistOne.className} uppercase md:-mr-[162px] md:ml-auto clamped-h2 z-20 relative`}
           >
-            <h2>Software</h2>
+            <h2>Mobile App</h2>
             <h2 className={`stalinist-outline`}>Engineer</h2>
           </hgroup>
         </div>
