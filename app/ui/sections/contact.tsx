@@ -79,7 +79,7 @@ export const Contact = () => {
           toast.error("Message sending failed, try later.");
           return;
         } 
-        toast.error(`${err?.message || 'An error occured. Try again later.'}`);
+        toast.error(`${err?.message || 'An error occurred. Try again later.'}`);
         
       }
       finally{

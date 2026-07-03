@@ -1,7 +1,7 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { stalinistOne } from "@/app/fonts";
 import { Project } from "@/app/ui/components/project";
 import { projectsData } from "@/app/data";
@@ -14,12 +14,6 @@ export const Projects = () => {
   const searchParams = useSearchParams();
   const platformFilter =
     (searchParams.get("platform") as "web" | "mobile") || "mobile";
-
-  const handleFilterChange = (newPlatform: string) => {
-    const params = new URLSearchParams(searchParams);
-    params.set("platform", newPlatform);
-    router.push(`?${params.toString()}`, {scroll: false});
-  };
 
   return (
     <Suspense fallback={<Loading />}>
