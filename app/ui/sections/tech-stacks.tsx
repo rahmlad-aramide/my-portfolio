@@ -1,6 +1,6 @@
 'use client';
+import { Bootstrap, CSS, Firebase, HTML, JavaScript, JQuery, NextJS, React, SASS, Shadcn, Supabase, Tailwind, TypeScript, Vue } from "@/app/assets/svg"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Bootstrap, CSS, Expo, Firebase, HTML, JavaScript, JQuery, NextJS, React, ReactNative, SASS, Shadcn, Supabase, Tailwind, TypeScript, Vue } from "@/app/assets/svg"
 import { stalinistOne } from "@/app/fonts";
 import { useEffect, useState } from "react";
 
