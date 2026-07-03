@@ -1,5 +1,5 @@
 "use client";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { stalinistOne } from "@/app/fonts";
@@ -10,7 +10,6 @@ import Loading from "@/app/loading";
 import Organized from "./organized";
 
 export const Projects = () => {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const platformFilter =
     (searchParams.get("platform") as "web" | "mobile") || "mobile";
