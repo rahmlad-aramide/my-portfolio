@@ -20,6 +20,11 @@ import treesoft from "@/app/assets/framed/Treesoft.webp";
 import uverus from "@/app/assets/framed/Uverus.webp";
 import wapp from "@/app/assets/framed/Wapp.webp";
 import yieldvest from "@/app/assets/images/projects/yieldvest-overview.webp";
+import plitrak from "@/app/assets/framed/Plitrak.webp";
+import paperstery from "@/app/assets/framed/Paperstery.webp";
+import carus from "@/app/assets/framed/Carus.webp";
+import ridotv2 from "@/app/assets/framed/Ridot_v.2.webp";
+import launch from "@/app/assets/framed/Launch.webp";
 
 interface TProject {
   id?: number;
@@ -46,6 +51,165 @@ interface TProject {
   demoVideo?: string;
 }
 export const projectsData: TProject[] = [
+  {
+    id: 23,
+    name: "Ridot v.2",
+    description:
+      "An EdTech platform empowering women and teenagers with in-demand tech skills to succeed in the modern tech ecosystem.",
+    slug: "ridot-v2",
+    projectUrl: "https://ridot.org",
+    framedImage: ridotv2,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258345/portfolio/images/Projects/Ridot/v2/ridot-course_lplif3.webp",
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258345/portfolio/images/Projects/Ridot/v2/ridot-home_pq6sqg.webp",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258345/portfolio/images/Projects/Ridot/v2/ridot-about_bhyjlc.webp",
+    category: "organizations",
+    repo: "https://github.com/rahmlad-aramide/ridot-software-academy",
+    languages: ["Next JS", "TypeScript", "Tailwind CSS"],
+    platform: "web",
+    type: "EdTech Platform",
+    status: "Completed",
+    detail:
+      "Ridot Software Academy's v.2 is a complete redesign and rebuild of their web presence, migrating from the original React-based landing page to a modern Next.js and TypeScript architecture. The new version retains the academy's mission of empowering women and teenagers with in-demand tech skills, while significantly elevating how that mission is communicated online.\n\nThe redesign introduced a full curriculum section, allowing prospective students to explore the academy's programs in detail, from Data Analytics and Data Science to Frontend Development, UI/UX Design, Digital Marketing, and a dedicated Kids Coding program. The updated site is built with performance and discoverability in mind, leveraging Next.js's App Router pattern, font optimization via Geist, and a clean component architecture that makes future content updates straightforward for the client.",
+    challenge:
+      "The primary challenge was improving substantially on my own prior work. Having built v.1, I had to approach v.2 with fresh eyes, identifying what wasn't working for users (especially first-time visitors who weren't tech-savvy) and making deliberate design decisions to address those gaps. Translating a diverse set of course offerings into a curriculum section that felt organized and approachable, rather than overwhelming, required multiple iterations. Migrating from React to Next.js also meant rethinking the component structure and data flow from the ground up.",
+    gains:
+      "Rebuilding Ridot v.2 reinforced an important lesson: iterating on your own previous work is one of the most honest forms of growth. Seeing clearly what v.1 got wrong, and having the skills to fix it, was deeply satisfying. For the academy, v.2 significantly strengthened their digital presence, giving prospective students a clearer picture of what the programs offer. Technically, this project deepened my experience with Next.js App Router patterns and gave me practice designing information architecture for non-technical audiences.",
+    isFeatured: true,
+  },
+  {
+    id: 24,
+    name: "Paperstery",
+    description:
+      "An independent publishing platform providing end-to-end support for transforming manuscripts into published books for creatives, professionals, and organizations.",
+    slug: "paperstery",
+    projectUrl: "https://paperstery.com",
+    framedImage: paperstery,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258376/portfolio/images/Projects/Paperstery/paperstery-services_hbpfmj.webp",
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258375/portfolio/images/Projects/Paperstery/paperstery-about_nlt4zm.webp",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258382/portfolio/images/Projects/Paperstery/paperstery-home_cpjy1h.webp",
+    category: "organizations",
+    repo: "https://github.com/rahmlad-aramide/paperstery",
+    languages: [
+      "Next JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Prisma",
+      "Sentry",
+    ],
+    platform: "web",
+    type: "Publishing Platform",
+    status: "Completed",
+    detail:
+      "Paperstery is a full-stack web platform for an independent publishing house that helps authors transform manuscripts into professionally published books. Unlike a simple marketing site, the platform is database-driven, built with Next.js App Router, TypeScript, and MongoDB via Prisma, to support the full range of the company's digital operations.\n\nKey features include a manuscript submission flow where authors can submit their work directly through the platform, a blog for publishing guidance and company updates with a rich text editor in the admin blog creation panel for formatting posts, a newsletter subscriber system, and a contact/inquiry form for publishing consultations. An admin panel gives the Paperstery team the ability to manage incoming manuscript submissions through a manuscript review workflow, review and respond to inquiries, and maintain published content, consolidating what would otherwise require multiple separate tools into one unified interface. Sentry is integrated for production error tracking, ensuring the client's platform remains reliable.",
+    challenge:
+      "Designing the Prisma schema over MongoDB to handle heterogeneous publishing projects, books, academic papers, collaborative writing, institutional publications, each with different metadata requirements, was a meaningful schema design challenge. Building the admin panel with appropriate role-based access and a clear manuscript review workflow also required careful thought, since the Paperstery team needed to process submissions efficiently without a technical background. Balancing a polished marketing presentation with a functional backend system, all within a single Next.js codebase, demanded disciplined code organization.",
+    gains:
+      "Paperstery was my first production project using Prisma with MongoDB (rather than a relational database), which expanded how I think about schema design for document-oriented data. Building a complete content management workflow for a real client, where the admin panel directly drives their daily operations, was a strong reminder that the backend tools I build have real human impact on the other side. Error monitoring via Sentry also became a habit I now apply to production projects by default.",
+    isFeatured: true,
+  },
+  {
+    id: 25,
+    name: "Carus",
+    description:
+      "A waste management platform enabling users to schedule waste pickups, earn reward points redeemable for gift cards and cash, and contribute to a cleaner environment.",
+    slug: "carus",
+    projectUrl: "https://carus.com.ng",
+    framedImage: carus,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258480/portfolio/images/Projects/Carus/carus-dashboard_t02gqo.webp",
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258482/portfolio/images/Projects/Carus/carus-home_liyjz4.webp",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258484/portfolio/images/Projects/Carus/carus-login_gkozyn.webp",
+    category: "organizations",
+    repo: "https://github.com/rahmlad-aramide/carus-frontend",
+    languages: [
+      "Next JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Sentry",
+    ],
+    platform: "web",
+    type: "GreenTech Sustainability Platform",
+    status: "Completed",
+    detail:
+      "Carus is a waste management and recycling rewards platform that incentivizes environmentally responsible behaviour by turning waste disposal into a rewarding experience. I worked across both the frontend and backend of this project, building the client-facing application, the admin panel, and contributing to the backend API.\n\nOn the client side, users can schedule waste pickups across multiple categories (plastics, electronics, organics), track their recycling history, and earn reward points redeemable for gift cards, airtime, or cash. The admin panel gives the Carus operations team full visibility over pickup requests, user accounts, partner businesses, and reward redemptions. The frontend is built with TanStack Query for efficient server-state management and synchronization, custom middleware for route protection, React Context for global state, and Sentry for production error tracking.",
+    challenge:
+      "The most complex challenge was keeping the reward system consistent across client and server state. Pickup confirmations from the backend needed to immediately reflect in a user's reward balance and history, with TanStack Query cache invalidation strategies that didn't leave users seeing stale data after a status change. Managing the admin panel's data across multiple interconnected business entities (users, pickups, rewards, partners) also required careful query organization to avoid redundant API calls and maintain performance as the dataset grew.",
+    gains:
+      "Carus gave me genuine full-stack exposure on a live product, from designing UI components to writing backend API logic. Working with TanStack Query at production scale sharpened my understanding of server-state management, and integrating Sentry revealed how much value real-time error visibility adds to a live app. More broadly, this project deepened my understanding of how to architect platforms that coordinate multiple actors, users, partners, and administrators, each with different data needs and permission levels.",
+    isFeatured: true,
+  },
+  {
+    id: 26,
+    name: "Launch with Rahmlad",
+    description:
+      "A streamlined CAC business registration platform that handles documentation and compliance for Nigerian businesses, enabling founders to register in minutes.",
+    slug: "launch-with-rahmlad",
+    projectUrl: "https://launch.rahmlad.com",
+    framedImage: launch,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258407/portfolio/images/Projects/Launch/launch-overview_x3klcu.webp",
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258408/portfolio/images/Projects/Launch/launch-referral_olk5fw.webp",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258405/portfolio/images/Projects/Launch/launch-home_lcombj.webp",
+    category: "personal",
+    repo: "https://github.com/rahmlad-aramide/cac-with-rahmlad",
+    languages: ["Next JS", "TypeScript", "Tailwind CSS", "Paystack"],
+    platform: "web",
+    type: "Business Services",
+    status: "Completed",
+    detail:
+      "Launch with Rahmlad is a full-service CAC (Corporate Affairs Commission) business registration platform built under Rahmlad Solutions, designed to make formal business registration in Nigeria fast, clear, and accessible. The CAC registration process is traditionally opaque and bureaucratic, Launch turns it into a guided digital workflow that any founder can complete in minutes.\n\nUsers select their registration type (Business Name, Limited Company, NGO/Incorporated Trustees, Annual Returns, TIN setup), then move through a multi-step form wizard with conditional fields tailored to their specific service. Required documents are submitted digitally, and payment is handled through Paystack integration. A secure personal dashboard allows users to track their application's progress through each processing stage and retrieve their official documents once registration is complete. An admin order management interface gives the accredited CAC agent team a clear queue to process applications efficiently. The platform also features a referral programme offering 3% commission and a ₦500 signup bonus.",
+    challenge:
+      "The core UX challenge was designing a multi-step form that felt simple to users who were navigating legal paperwork, often for the first time, while correctly handling the different field requirements across registration types. On the technical side, tying together the Paystack payment flow, document upload pipeline, application status tracking, and user dashboard into a coherent state model required careful orchestration. Ensuring that a completed payment reliably triggered the correct application state, with no gaps where a user could pay but their order not register, was critical to trust.",
+    gains:
+      "Launch taught me to design for users who are stressed and unfamiliar with a process, where clarity and trust matter more than feature density. Integrating Paystack for real transactional flows and building secure document handling gave me practical experience with the full stack of a commercial SaaS product. More personally, seeing the platform help Nigerian entrepreneurs formalize their businesses, something that was previously confusing and time-consuming, made this one of the most directly impactful projects I've shipped under Rahmlad Solutions.",
+    isFeatured: true,
+  },
+  {
+    id: 27,
+    name: "Plitrak",
+    description:
+      "An all-in-one workspace to track scholarships, internships, fellowships, and jobs, with deadline heatmaps, smart reminders, and interview rate analytics.",
+    slug: "plitrak",
+    projectUrl: "https://plitrak.rahmlad.com",
+    framedImage: plitrak,
+    image:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258425/portfolio/images/Projects/Plitrak/plitrak-dashboard_mgstcx.webp",
+    image2:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258428/portfolio/images/Projects/Plitrak/plitrak-import_oo0a0z.webp",
+    image3:
+      "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1783258427/portfolio/images/Projects/Plitrak/plitrak-home_nji5te.webp",
+    category: "personal",
+    repo: "https://github.com/rahmlad-aramide/applitrack",
+    languages: [
+      "Next JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+    ],
+    platform: "web",
+    type: "Productivity Tool",
+    status: "Completed",
+    detail:
+      "Plitrak was born from a real personal problem: managing dozens of simultaneous scholarship, internship, fellowship, and job applications with no single place to track them all. Most people rely on scattered spreadsheets or mental notes, losing opportunities to missed deadlines or forgotten follow-ups.\n\nBuilt as a fullstack Next.js application with Supabase as the backend, Plitrak provides a centralized workspace where each application is logged with its opportunity type, deadline, current status, and relevant notes. Users can also import an existing record of applications from a CSV file, and the system automatically parses the file and creates the records for them. Deadline heatmaps surface urgency at a glance, showing which applications need attention today versus next week. Smart email reminders, interview rate analytics, and global timezone synchronization ensure no deadline slips and users can understand their own conversion rates across different opportunity types. Supabase handles authentication, PostgreSQL data storage, and, critically, SQL functions and database triggers that automate server-side actions like reminder scheduling and status transitions directly at the database level.",
+    challenge:
+      "The central technical challenge was making Supabase's BaaS capabilities work seamlessly within a fullstack Next.js App Router application. I leaned into Supabase's SQL functions and database triggers to drive application behaviour at the database level, keeping automation logic where the data lives rather than in application-layer code. Bridging this Supabase-native approach with Next.js Server Actions and maintaining consistent session state between Supabase Auth and Next.js middleware required careful architecture decisions, particularly around when to trust the client versus always revalidating through the server.",
+    gains:
+      "Plitrak pushed me significantly deeper into Supabase's advanced capabilities, writing PostgreSQL functions and triggers directly within the database to drive application behaviour reframed how I think about backend architecture. Sometimes the most elegant and performant solution lives at the database layer, not in application code. Building a tool I actively use myself also sharpened my instinct for UX decisions: when you feel the friction firsthand, you fix it faster. This project cemented Supabase as a go-to for fullstack Next.js projects where speed of development and scalability both matter.",
+    isFeatured: true,
+  },
   {
     id: 20,
     name: "Xpacy Mobile",
@@ -81,7 +245,7 @@ export const projectsData: TProject[] = [
     id: 19,
     name: "Reciplorer Mobile",
     framedImage: reciplorer,
-    projectUrl: "https://reciplorer.vercel.app/",
+    projectUrl: "https://reciplorer.rahmlad.com/",
     repo: "https://github.com/rahmlad-aramide/reciplorer",
     type: "Global Problem Solving",
     status: "Completed",
@@ -179,7 +343,7 @@ export const projectsData: TProject[] = [
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1715199739/portfolio/images/Projects/LanguageAI/image2_wvv5mn.png",
     image3:
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1715199738/portfolio/images/Projects/LanguageAI/image3_lb7prv.png",
-    projectUrl: "https://languageai.vercel.app/",
+    projectUrl: "https://languageai.rahmlad.com",
     repo: "https://github.com/rahmlad-aramide/languageai",
     type: "Global Problem Solving",
     status: "Completed",
@@ -215,7 +379,7 @@ export const projectsData: TProject[] = [
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913336/portfolio/images/Projects/Reciplorer/reciplorer1_seql8k.png",
     image3:
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1746913337/portfolio/images/Projects/Reciplorer/reciplorer3_z682h3.png",
-    projectUrl: "https://reciplorer.vercel.app/",
+    projectUrl: "https://reciplorer.rahmlad.com",
     repo: "https://github.com/rahmlad-aramide/reciplorer",
     type: "Global Problem Solving",
     status: "Completed (v.2 underway)",
@@ -238,7 +402,7 @@ export const projectsData: TProject[] = [
       "A significant challenge encountered during the development of Reciplorer was effectively integrating and managing data from the TheMealDB API while ensuring a seamless and responsive user experience. This involved handling asynchronous data fetching, structuring the data in a user-friendly format, and implementing efficient search and filtering functionality to quickly process a potentially large number of recipes. Another key hurdle was designing an intuitive interface for users to add their own recipes, including handling ingredient input, step-by-step instructions, and potentially media uploads, while maintaining data integrity and security. Balancing feature richness with ease of use and performance optimization across different devices also presented a considerable design and development challenge.",
     gains:
       "Developing Reciplorer has provided me with valuable experience in building a complete web application from scratch with a focus on user interaction and data management. I've gained practical skills in integrating third-party APIs like TheMealDB, handling complex backend data, and implementing client-side routing and state management with NextJS and React. The implementation of search and filtering functionality has deepened my understanding of effective optimization for efficient data retrieval. Furthermore, building the recipe submission feature has enhanced my knowledge of form handling and data validation. This project has significantly improved my proficiency in front-end development with TypeScript, Tailwind CSS, and UI libraries like Shadcn UI, as well as deployment on platforms like Vercel. Overall, Reciplorer represents a tangible demonstration of my ability to create functional and user-friendly web applications from concept to deployment.",
-    isFeatured: true,
+    isFeatured: !true,
     platform: "web",
   },
   {
@@ -251,7 +415,7 @@ export const projectsData: TProject[] = [
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1715199772/portfolio/images/Projects/Weather%20App/image_o2ss62.png",
     image3:
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1715199770/portfolio/images/Projects/Weather%20App/image2_f6gsw6.png",
-    projectUrl: "https://r-wapp.vercel.app/",
+    projectUrl: "https://wapp.rahmlad.com/",
     repo: "https://github.com/rahmlad-aramide/wapp",
     type: "Global Problem Solving",
     status: "Completed",
@@ -280,12 +444,12 @@ export const projectsData: TProject[] = [
   
       Anticipated User Benefits:
       The application is expected to make weather-related information more accessible, providing users with tools necessary for planning and decision-making based on weather conditions. Its educational potential is significant, offering a practical resource for students and educators in meteorological studies. For researchers, WApp provides a platform for data analysis and weather pattern observation. Additionally, by delivering timely and accurate weather warnings, it enhances community safety and preparedness for adverse weather conditions.`,
-    isFeatured: true,
+    isFeatured: !true,
     platform: "web",
   },
   {
     id: 4,
-    name: "Ridot",
+    name: "Ridot v.1",
     framedImage: ridot,
     image:
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1715176727/portfolio/images/Projects/Ridot/Desktop_ymhvn8.png",
@@ -293,12 +457,12 @@ export const projectsData: TProject[] = [
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1715201476/portfolio/images/Projects/Ridot/image2_o9idjm.png",
     image3:
       "https://res.cloudinary.com/dh4rm7b7b/image/upload/v1715201478/portfolio/images/Projects/Ridot/image_cbnyzm.png",
-    projectUrl: "https://ridot.org/",
+    projectUrl: "https://v1.ridot.org/",
     repo: "https://github.com/rahmlad-aramide/ridot-software-academy",
     type: "Landing Page Website",
     status: "Completed and being Maintained",
-    version: "v.2 underway",
-    slug: "ridot",
+    version: "v.1",
+    slug: "ridot-v1",
     description:
       "A software academy website that includes their pricing and subscription information.",
     detail: `Ridot Software Academy is a transformative educational platform dedicated to enabling and encouraging women to start and advance their careers in technology. Positioned at ridot.tech, the platform offers a range of courses, resources, and mentorship opportunities tailored specifically for women who are new to tech or looking to deepen their existing tech skills. By fostering a supportive community, Ridot Software Academy aims to break down the barriers that women often face in the tech industry.
@@ -310,7 +474,7 @@ export const projectsData: TProject[] = [
     gains: `On a personal level, the development of Ridot Software Academy has been profoundly rewarding. It has allowed me to contribute positively by advocating for greater inclusivity in the tech field. Creating a platform that directly addresses and supports the underrepresented group of women in tech has deepened my commitment to social impact within the tech industry. This project has not only enhanced my technical skills but also enriched my perspective on the transformative power of technology as a tool for empowerment.
 
       For the community, Ridot Software Academy has become a pivotal force in promoting diversity in the tech world. It empowers women by providing the necessary skills and confidence to succeed in tech roles, thereby fostering a more inclusive industry. The success of academy participants helps challenge stereotypes and inspires a broader cultural shift towards equality in tech, encouraging more women to pursue and excel in technology careers.`,
-    isFeatured: true,
+    isFeatured: !true,
     platform: "web",
   },
   {
@@ -336,7 +500,7 @@ export const projectsData: TProject[] = [
     category: "personal",
     challenge: `A major problem that I am faced with in this design and development stage is obtaining high-quality pictures of his products to display in the website catalog and categories section. Therefore, I am tentatively using placeholder images until the project is launched.`,
     gains: `As it's still a work in progress, the major gain I'm looking forward to is seeing that I can solve a local problem. I was inspired to do this because I was impressed by the quality of his work. Additionally, since his company owns a vehicle used to transport products to customers, this website will further bring his brand to the attention of potential clients and eliminate the need for them to visit the showroom before making a purchase.`,
-    isFeatured: true,
+    isFeatured: !true,
     platform: "web",
   },
   {
@@ -499,7 +663,7 @@ export const projectsData: TProject[] = [
     description:
       "The platform for a community-led developer conference by the Google Developer Group, offering opportunities to learn about Google technologies, network with fellow developers, and grow the local tech ecosystem.",
     slug: "",
-    projectUrl: "https://devfestogbomoso.xyz/",
+    projectUrl: "https://devfestogbomoso.com/",
     framedImage: devfest,
     category: "communities",
     repo: "",
@@ -564,12 +728,13 @@ export const projectsData: TProject[] = [
     description:
       "The website for a dynamic non-profit organization committed to creating opportunities, fostering empowerment, and promoting sustainable development.",
     slug: "",
-    projectUrl: "https://www.flutterbytesconf.com/",
+    projectUrl: "https://aofounda.org/",
     framedImage: aofounda,
     category: "organizations",
     repo: "",
     languages: ["Next JS", "Tailwind CSS"],
     platform: "web",
+    type: "NGO",
   },
 
   // {

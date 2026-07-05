@@ -14,14 +14,18 @@ export const metadata: Metadata = {
     default: "Abdrahman Oladimeji (Rahmlad) | Software Engineer",
     template: "%s | Rahmlad",
   },
-  description: `A Fullstack Web and Cross-Platform Mobile App
+  description: `Hey there, I'm Abdrahman, a Fullstack Web and Cross-Platform Mobile App
           Developer with a foundation in high-performance Frontend Engineering.
           Specializing in transforming complex ideas into pixel-perfect,
           user-friendly interfaces that captivate users across web and mobile
           ecosystems & Founder of Rahmlad Solutions.`,
   openGraph: {
     title: "Abdrahman Oladimeji (Rahmlad)",
-    description: "Software Engineer & Founder of Rahmlad Solutions.",
+    description: `Hey there, I'm Abdrahman, a Fullstack Web and Cross-Platform Mobile App
+          Developer with a foundation in high-performance Frontend Engineering.
+          Specializing in transforming complex ideas into pixel-perfect,
+          user-friendly interfaces that captivate users across web and mobile
+          ecosystems & Founder of Rahmlad Solutions.`,
     url: "https://dev.rahmlad.com",
     siteName: "Rahmlad Portfolio",
     locale: "en_US",
@@ -35,6 +39,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abdrahman Oladimeji (Rahmlad)",
     creator: "@Dev_Rahmlad",
+    description: `Hey there, I'm Abdrahman, a Fullstack Web and Cross-Platform Mobile App
+          Developer with a foundation in high-performance Frontend Engineering.
+          Specializing in transforming complex ideas into pixel-perfect,
+          user-friendly interfaces that captivate users across web and mobile
+          ecosystems & Founder of Rahmlad Solutions.`,
   },
   keywords: [
     "Abdrahman Oladimeji",

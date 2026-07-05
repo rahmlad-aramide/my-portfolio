@@ -12,7 +12,7 @@ export const About = () => {
         >
           Creating experiences that spark connection and leave a mark.
         </h2>
-        <p className="text-xs sm:text-base !leading-[18px] md:!leading-7 mb-4 md:mb-3">
+        <p className="text-xs sm:text-base !leading-[18px] md:!leading-7 mb-4 md:mb-3 text-justify">
           What began as a childhood fascination with how computers work evolved
           into a lifelong mission to engineer software that moves the needle.
           Guided by that early curiosity, I dedicated myself to mastering
