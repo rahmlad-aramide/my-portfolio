@@ -77,7 +77,7 @@ export default async function Page({
       <div className="flex flex-col gap-10 pattern-before">
         <div className="pt-5 relative">
           <Link
-            href={`/?platform=${project.platform}#projects`}
+            href={`/#projects`}
             className="flex gap-2 hover:opacity-80 active:opacity-100 transition-opacity duration-200"
           >
             <span className="rotate-180">
