@@ -73,6 +73,9 @@ const Organized = () => {
                   projectLink={proj.projectUrl}
                   description={proj.description}
                   isFeatured={proj.isFeatured}
+                  demoVideo={proj.demoVideo}
+                  demoVideoPortrait={proj.demoVideoPortrait}
+                  demoVideoLandscape={proj.demoVideoLandscape}
                 />
               ))}
           </div>

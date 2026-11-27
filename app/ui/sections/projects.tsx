@@ -32,6 +32,8 @@ export const Projects = () => {
                       pageLink={project.slug}
                       projectLink={project.projectUrl}
                       demoVideo={project.demoVideo}
+                      demoVideoPortrait={project.demoVideoPortrait}
+                      demoVideoLandscape={project.demoVideoLandscape}
                       isFeatured={project.isFeatured}
                       type={idx % 2 === 0 ? "imageFirst" : "textFirst"}
                     />

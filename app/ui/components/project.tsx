@@ -14,6 +14,8 @@ interface ITextsAndLink {
 }
 interface IProject extends ITextsAndLink {
   imageLink?: string | StaticImageData;
+  demoVideoPortrait?: string;
+  demoVideoLandscape?: string;
 }
 
 const TextsAndLink: React.FC<ITextsAndLink> = ({
@@ -44,6 +46,8 @@ const TextsAndLink: React.FC<ITextsAndLink> = ({
       </p>
       <Link
         href={(type === "organized" && !isFeatured) ? projectLink : pageLink}
+        target={(type === "organized" && !isFeatured) ? "_blank" : undefined}
+        rel={(type === "organized" && !isFeatured) ? "noopener noreferrer" : undefined}
         className={`text-xs ${type === "organized" ? "md:text-sm py-1.5 px-3" : "md:text-base py-2 px-4"} gap-1 uppercase border border-[#E3E4E68C] rounded-full bg-transparent hover:bg-primary transition duration-200 inline-flex items-center`}
       >
         {(type === "organized" && !isFeatured) ? "Visit Website" : "View Work"}
@@ -64,6 +68,8 @@ export const Project: React.FC<IProject> = ({
   projectLink,
   imageLink,
   demoVideo,
+  demoVideoPortrait,
+  demoVideoLandscape,
   isFeatured
 }) => {
   return (
@@ -81,8 +87,35 @@ export const Project: React.FC<IProject> = ({
           type === "organized" ? "flex-col" : "md:w-1/2"
         } h-full p-4 sm:p-7 flex justify-center items-center border border-[#1C1C1C] hover:border-primary group`}
       >
-        <div className="flex w-full h-auto">
-          {demoVideo ? (
+        <div className="flex w-full h-auto pb-4">
+          {demoVideoPortrait || demoVideoLandscape ? (
+            <div className="w-full mx-auto">
+              {demoVideoPortrait && (
+                <div className="aspect-[1/1.5] overflow-hidden rounded-lg mx-auto md:hidden">
+                  <video
+                    src={demoVideoPortrait}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover"
+                  ></video>
+                </div>
+              )}
+              {demoVideoLandscape && (
+                <div className="aspect-video overflow-hidden rounded-lg mx-auto hidden md:block">
+                  <video
+                    src={demoVideoLandscape}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover"
+                  ></video>
+                </div>
+              )}
+            </div>
+          ) : demoVideo ? (
             <div className="aspect-[1/1.5] overflow-hidden rounded-lg mx-auto">
               <iframe
                 src={demoVideo}

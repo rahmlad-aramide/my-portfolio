@@ -96,6 +96,7 @@ export default async function Page({
             <Link
               href={project?.projectUrl || ""}
               target={"_blank"}
+              rel="noopener noreferrer"
               className="text-white bg-primary border border-primary disabled:bg-primary/50 hover:bg-transparent active:bg-primary w-full md:w-fit max-w-[342px] min-h-12 md:min-h-[60px] rounded-[40px] px-6 md:px-10 flex justify-center items-center transition duration-200 gap-[5px] whitespace-nowrap"
             >
               Visit Website <ArrowRight />
@@ -160,16 +161,49 @@ export default async function Page({
             </div>
           )}
         </div>
-        {project?.demoVideo && (
-          <div className="aspect-[1/1.5] overflow-hidden rounded-lg mx-auto">
-            <iframe
-              src={project.demoVideo}
-              title={`${project.name} demo video`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full"
-            ></iframe>
+        {project?.demoVideoPortrait || project?.demoVideoLandscape ? (
+          <div className="mx-auto w-full max-w-3xl">
+            {project?.demoVideoPortrait && (
+              <div className="aspect-[1/1.5] overflow-hidden rounded-lg mx-auto md:hidden">
+                <video
+                  src={project.demoVideoPortrait}
+                  title={`${project.name} demo video`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  className="h-full w-full object-cover"
+                ></video>
+              </div>
+            )}
+            {project?.demoVideoLandscape && (
+              <div className="aspect-video overflow-hidden rounded-lg mx-auto hidden md:block">
+                <video
+                  src={project.demoVideoLandscape}
+                  title={`${project.name} demo video`}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  className="h-full w-full object-cover"
+                ></video>
+              </div>
+            )}
           </div>
+        ) : (
+          project?.demoVideo && (
+            <div className="aspect-[1/1.5] overflow-hidden rounded-lg mx-auto">
+              <iframe
+                src={project.demoVideo}
+                title={`${project.name} demo video`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              ></iframe>
+            </div>
+          )
         )}
         {project?.image ? (
           <div className="relative py-10">
