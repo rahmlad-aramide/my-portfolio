@@ -3,6 +3,9 @@ import { StaticImageData } from "next/image";
 import adorn from "@/app/assets/framed/Adorn.webp";
 import aofounda from "@/app/assets/framed/AO-Foundation.webp";
 import appOwe from "@/app/blur.jpg";
+import bookpheralMobile from "@/app/assets/framed/Bookpheral-Mobile.webp";
+import interpay from "@/app/assets/framed/Interpay.webp";
+import globalleePay from "@/app/assets/framed/GloballeePay.webp";
 import devfest from "@/app/assets/framed/Devfest-Mosho.webp";
 import flutterbytes from "@/app/assets/framed/FlutterBytes.webp";
 import hackade from "@/app/assets/framed/Hackade.webp";
@@ -112,32 +115,131 @@ export const projectsData: TProject[] = [
     id: 22,
     name: "Joinda Quest Mobile",
     framedImage: joindaQuest,
-    projectUrl: "https://joinda-quest.vercel.app/",
+    projectUrl: "https://joindaquest.io/",
     repo: "https://github.com/joindaio/quest-mobile",
     type: "Social Engagement",
     status: "Completed",
-    version: "v.1",
+    version: "v.2",
     slug: "joinda-quest-mobile",
     description:
-      "A social engagement application where users participate in quests, complete tasks, and play games to earn rewards.",
+      "A mobile companion app for Joinda Quest's social engagement platform — quests, tasks, and rewards, with native navigation and deep links to specific quests, events, and library items.",
     detail:
-      "Joinda Quest Mobile is a social engagement application which allows users to participate in quests and tasks, play games, and earn rewards for participating in those activities. It focuses on gamifying social interactions and providing a platform for community challenges. Users can track their progress, view leaderboards, and redeem rewards through an intuitive mobile interface.",
+      "Joinda Quest Mobile brings Joinda Quest's quest, task, and rewards experience to a native Expo Router app, built for a smooth, app-store-ready mobile experience rather than just pointing users at the website. It handles its own navigation, a loading experience driven by real progress rather than a fixed timer, and Android back-button behaviour that does what a native app is expected to do before ever offering to exit.",
     languages: [
       "React Native",
       "Expo",
       "TypeScript",
-      "NativeWind",
-      "Firebase",
-      "Zustand",
+      "Expo Router",
+      "React Navigation",
+      "react-native-reanimated",
     ],
     category: "organizations",
     challenge:
-      "Implementing a real-time reward and task tracking system that syncs across multiple devices while maintaining high performance interactive experience was a significant hurdle. Ensuring the correct integration of the reward distribution logic was also paramount.",
+      "The main challenge was getting the small native details right: Android's hardware back button needed to navigate within the app's own history before falling back to an exit confirmation, and the loading screen needed to track real progress instead of a guessed splash duration. Bridging a handful of actions the platform can't trigger on its own, like a file download, also needed a clean, structured message contract rather than ad hoc signals.",
     gains:
-      "I strengthened my knowledge of engineering a social engagement platform serving over 10,000 users across the world. It also allowed me to explore complex user engagement metrics and mobile-first social networking patterns.",
+      "This project sharpened my sense of which details separate an app that feels native from one that doesn't — back-button behaviour, loading feedback, and a clean bridge for the few actions that need one. It's a good reminder that a lot of what makes a mobile app feel right has nothing to do with the core product logic at all.",
     isFeatured: false,
     platform: "mobile",
     demoVideo: "https://www.youtube.com/embed/1cvStJFUe2c",
+  },
+  {
+    id: 23,
+    name: "Bookpheral Mobile",
+    framedImage: bookpheralMobile,
+    image: "/images/projects/bookpheral-mobile/bookpheral-mobile-home.webp",
+    image2: "/images/projects/bookpheral-mobile/bookpheral-mobile-catalog.webp",
+    image3: "/images/projects/bookpheral-mobile/bookpheral-mobile-library.webp",
+    projectUrl:
+      "https://play.google.com/store/apps/details?id=com.devrahmlad.bookpheral",
+    repo: "https://github.com/rahmlad-aramide/bookpheral-mobile",
+    type: "EdTech Reading App",
+    status: "Beta Testing",
+    slug: "bookpheral-mobile",
+    description:
+      "The companion React Native reading app for Bookpheral — discover, buy, and read books from African educators in a reader built for long study sessions, with reading streaks and offline-friendly protected access.",
+    detail:
+      "Bookpheral Mobile is the React Native companion to the Bookpheral web platform, built with Expo Router and NativeWind. It covers discovery (a browsable catalog with search and educator profiles), a protected reader (adjustable text size, light/dark/sepia themes, table of contents, in-book search, resume-where-you-left-off), and habit-building touches like a reading streak and a weekly pages-read count, all backed by a Zustand store persisted to device storage and TanStack Query against the same API the web dashboard uses.\n\nA notable product decision shaped the app's architecture: Apple's and Google's store policies on steering users to outside payment methods meant in-app purchasing had to go. The Catalog is deliberately browse-only — no prices, no checkout, no mention of the website on a book a reader doesn't already own — while actual purchases happen on bookpheral.com. Deep links and Android App Links/iOS Universal Links tie the two together, so a shared link to a book, a class attendance session, or a library item opens directly in the app when it's installed and falls back to the web otherwise.",
+    languages: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind (Tailwind CSS)",
+      "Zustand",
+      "TanStack Query",
+      "Expo Router",
+    ],
+    category: "personal",
+    challenge:
+      "The hardest part wasn't a bug, it was a compliance-driven rewrite: ripping checkout, prices, and discount ribbons out of an app that originally sold books in-app, without breaking the experience for a reader who already owns a book or turning the Catalog into a confusing dead end. That meant auditing every screen's copy for anything that implied a price or pointed at an external payment method, while still making the \"buy on the web, read in the app\" handoff feel like one product rather than two disconnected ones.",
+    gains:
+      "This project sharpened my sense of mobile platform policy as a real architectural constraint, not a launch-week checklist item — the store-compliance rewrite touched routing, copy, and navigation far more than it touched any single hard algorithm. It also reinforced a habit I already had from Bookpheral's web side: keep the parts of the product that touch money or access control server-authoritative, never client-trusted.",
+    isFeatured: true,
+    platform: "mobile",
+  },
+  {
+    id: 24,
+    name: "Interpay",
+    framedImage: interpay,
+    projectUrl:
+      "https://play.google.com/store/apps/details?id=com.interpayco.interpay",
+    repo: "",
+    type: "Banking & Payments",
+    status: "Completed",
+    slug: "interpay",
+    description:
+      "A white-labeled personal banking app — wallets, transfers, airtime/data, and bill payments — built on Uverus's shared mobile banking platform and rebranded for Interpay.",
+    detail:
+      "Interpay is one of several banking apps published from platform-mobile, a white-label mobile banking monorepo I work on: a single Expo/Expo Router codebase (personal and corporate banking variants, shared API client, shared themed UI library) deployed across multiple client brands. Branding — name, colors, logo, API endpoint — resolves in two layers: build-time defaults baked into the bundle, then a runtime overlay fetched per organisation and merged on top, so a brand refresh can ship without an app store resubmission. Interpay is the personal-banking build of that platform, published to the Play Store under its own brand, name, and colors.",
+    languages: [
+      "React Native",
+      "Expo",
+      "Expo Router",
+      "TypeScript",
+      "Zustand",
+      "TanStack Query",
+      "Shopify Restyle",
+    ],
+    category: "organizations",
+    challenge:
+      "The core problem behind every brand this platform ships, Interpay included, is keeping one codebase correct for many tenants at once: branding has to resolve across its two layers without ever mixing up a user's actual banking data across tenants, and the native build pipeline (fetch org config, overlay environment secrets, prebuild, compile) has to reliably produce a correctly-branded binary per client on demand, not a one-off manual process per release.",
+    gains:
+      "Working on a true multi-tenant mobile platform, rather than one app per client, taught me to think hard about where tenant-specific configuration belongs — build-time versus runtime — and why that split matters: a logo or color change shouldn't need a new app store release, but a user's financial data should never leak across a tenant boundary. It's a different kind of engineering discipline than building a single-purpose app.",
+    isFeatured: false,
+    platform: "mobile",
+  },
+  {
+    id: 25,
+    name: "GloballeePay",
+    framedImage: globalleePay,
+    image: "/images/projects/globallee-pay/globallee-home.webp",
+    image2: "/images/projects/globallee-pay/globallee-store.webp",
+    image3: "/images/projects/globallee-pay/globallee-history.webp",
+    projectUrl:
+      "https://play.google.com/store/apps/details?id=com.globallee.app",
+    repo: "",
+    type: "Banking & Payments",
+    status: "Completed",
+    slug: "globallee-pay",
+    description:
+      "A white-labeled banking wallet app for Globallee, built on Uverus's shared mobile banking platform and extended with an in-app store for Globallee's own products.",
+    detail:
+      "GloballeePay is another brand published from platform-mobile, the white-label banking monorepo I work on, carrying the same base feature set as every tenant on the platform — wallet funding, transfers to other Globallee wallets or external bank accounts, airtime and data purchases, and prepaid/postpaid electricity and cable-TV bill payments — plus a store module built specifically for Globallee, letting customers browse and pay for Globallee's own products straight from their wallet balance, with order tracking from paid to fulfilled. Every transaction is confirmed with a PIN, biometric sign-in is available on supported devices, and users can generate a shareable receipt for any transaction.",
+    languages: [
+      "React Native",
+      "Expo",
+      "Expo Router",
+      "TypeScript",
+      "Zustand",
+      "TanStack Query",
+      "Shopify Restyle",
+    ],
+    category: "organizations",
+    challenge:
+      "The interesting problem here wasn't the base wallet feature set — that's shared platform code — it was building the store module as a brand-specific extension without breaking the white-label model: Globallee's storefront, product catalogue, and order tracking needed to feel native to the shared wallet experience (same navigation, same design system, same transaction and receipt flow) while staying isolated enough that it doesn't leak into other brands built from the same codebase.",
+    gains:
+      "Building a brand-specific feature on top of a shared multi-tenant platform sharpened my sense of where to draw the line between platform code every tenant gets and a single client's own extension — getting that boundary wrong either bloats the shared codebase with one client's business logic, or forces a fork that defeats the point of white-labeling in the first place.",
+    isFeatured: false,
+    platform: "mobile",
   },
   {
     id: 21,
