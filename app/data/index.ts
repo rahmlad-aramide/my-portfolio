@@ -131,7 +131,7 @@ export const projectsData: TProject[] = [
     status: "Completed",
     slug: "interpay",
     description:
-      "A white-labeled personal banking app — wallets, transfers, airtime/data, and bill payments — built on Uverus's shared mobile banking platform and rebranded for Interpay.",
+      "A white-labeled personal banking app — wallets, transfers, airtime/data, and bill payments — built on Uverus's shared mobile banking platform branded for Interpay.",
     detail:
       "Interpay is one of several banking apps published from platform-mobile, a white-label mobile banking monorepo I work on: a single Expo/Expo Router codebase (personal and corporate banking variants, shared API client, shared themed UI library) deployed across multiple client brands. Branding — name, colors, logo, API endpoint — resolves in two layers: build-time defaults baked into the bundle, then a runtime overlay fetched per organisation and merged on top, so a brand refresh can ship without an app store resubmission. Interpay is the personal-banking build of that platform, published to the Play Store under its own brand, name, and colors.",
     languages: [

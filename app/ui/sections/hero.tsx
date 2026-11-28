@@ -24,7 +24,7 @@ export const Hero = () => {
           Abdrahman Oladimeji (Rahmlad) - A Cross-Platform Mobile App
           Developer with a foundation in high-performance Frontend Engineering.
           Specializing in transforming complex ideas into pixel-perfect,
-          user-friendly interfaces that captivate users across mobile ecosystems.
+          user-friendly interfaces that captivate users across web and mobile ecosystems.
         </h1>
         <div className="order-1 md:order-2 max-w-fit">
           <hgroup
