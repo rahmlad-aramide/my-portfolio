@@ -30,10 +30,10 @@ export const About = () => {
             <h3
               className={`${jakarta.className} outfit-outline text-3xl md:text-6xl flex items-start md:justify-center`}
             >
-              20<sup className="text-xl">+</sup>
+              10<sup className="text-xl">+</sup>
             </h3>
             <h3 className="text-xs md:text-lg font-medium md:font-semibold">
-              Live Projects
+              Projects
             </h3>
           </hgroup>
         </div>
